@@ -43,17 +43,22 @@ html,body{overscroll-behavior-x:contain}.question-card{touch-action:pan-y pinch-
 
 .jump-overall{display:grid;grid-template-columns:1fr auto;gap:6px 15px;padding:0 3px 20px;margin-bottom:8px;color:var(--muted);font-size:.78rem}.jump-overall strong{font-weight:550;color:var(--ink)}.jump-overall .overall-count{font-size:.69rem;grid-column:1/-1}.jump-overall .jump-meter{height:4px}.nojs-card{max-width:500px;margin:60px auto;padding:30px;text-align:center}.nojs-card p{margin:20px 0;color:var(--muted);font-size:.9rem}
 
-.section-view-controls{display:flex;justify-content:flex-end;margin:-6px 0 18px;position:sticky;top:105px;z-index:12;padding:8px 0;background:var(--bg)}.section-view-toggle{font-size:.78rem;min-height:40px;padding:8px 15px}.section-view-toggle[aria-pressed="true"]{background:#e5eedc;border-color:#91aa7b;color:#31522d}.section-question-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}.section-question-number{font-size:.74rem;color:var(--muted);margin-bottom:15px}.section-question-heading .section-question-number{margin-bottom:0}.whole-section .question-card{margin-bottom:18px;touch-action:pan-y pinch-zoom}.whole-section .question-card{scroll-margin-top:175px}[data-theme="dark"] .section-view-toggle[aria-pressed="true"]{background:#34492d;color:#d5e6bf;border-color:#8fa77b}
-@media(max-width:600px){.section-view-controls{top:88px;margin-bottom:15px}.section-view-toggle{font-size:.73rem;min-height:39px}.whole-section .question-card{scroll-margin-top:155px}}
+.section-view-controls{display:flex;justify-content:flex-end;margin:-6px 0 18px;position:sticky;top:105px;z-index:12;padding:8px 0;background:var(--bg)}.section-view-toggle{font-size:.78rem;min-height:40px;padding:8px 15px}.section-view-toggle[aria-pressed="true"]{background:#e5eedc;border-color:#91aa7b;color:#31522d}.section-question-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}.section-question-number{font-size:.74rem;color:var(--muted);margin-bottom:15px}.section-question-heading .section-question-number{margin-bottom:0}[data-theme="dark"] .section-view-toggle[aria-pressed="true"]{background:#34492d;color:#d5e6bf;border-color:#8fa77b}
+@media(max-width:600px){.section-view-controls{top:88px;margin-bottom:15px}.section-view-toggle{font-size:.73rem;min-height:39px}}
 
 .range-heading{display:flex;align-items:baseline;justify-content:space-between;gap:15px}.range-criterion{font-size:.82rem;font-weight:500;color:var(--muted)}
+
+.all-questions #question-list{background:white;border:1px solid var(--line);border-radius:24px;padding:0 38px 12px}.all-questions .question-card{background:transparent;border:0;border-radius:0;padding:26px 0 38px;min-height:0;scroll-margin-top:175px}.document-topic{font-family:Georgia,"Times New Roman",serif;font-size:1.6rem;font-weight:400;line-height:1.4;padding:34px 0 8px}.document-topic:not(:first-child){border-top:1px solid var(--line);margin-top:10px}[data-theme="dark"] .all-questions #question-list{background:#1e2b23}[data-theme="dark"] .all-questions .question-card{background:transparent}
+.answer-comparison{width:100%;table-layout:fixed;border-spacing:8px;font-size:.85rem;line-height:1.6}.answer-comparison th{text-align:left;font-weight:500}.answer-comparison thead th{width:50%;font-size:.78rem;color:var(--muted);padding-bottom:4px}.answer-comparison .comparison-label{font-size:.77rem;color:var(--muted);padding-top:12px;font-weight:400}.comparison-values td{vertical-align:top;padding:12px;border:1px solid var(--line);border-radius:10px;white-space:pre-wrap;overflow-wrap:anywhere}.comparison-values.different td{background:#edf3e6;border-color:#b2c4a1}.comparison-values strong{font-size:1.3rem;font-weight:500}.comparison-empty,.comparison-excluded{color:var(--muted)}.answer-comparison ol{margin:0;padding-left:20px;white-space:normal}.answer-comparison li+li{margin-top:8px}.comparison-excluded{margin-top:12px;font-size:.74rem}[data-theme="dark"] .comparison-values.different td{background:#30432d;border-color:#6f865f}
+@media(max-width:600px){.all-questions #question-list{padding:0 23px 6px;border-radius:21px}.all-questions .question-card{padding:24px 0 32px;scroll-margin-top:155px}.document-topic{font-size:1.4rem;padding-top:28px}.answer-comparison{border-spacing:5px;font-size:.8rem}.comparison-values td{padding:10px 8px}}
+@media(max-width:370px){.all-questions #question-list{padding-left:19px;padding-right:19px}}
 </style>
 </head>
 <body>
 <header class="app-header"><a href="#" class="brand" id="home" aria-label="О важном, к началу"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>о важном</span></a><div class="header-controls"><button id="theme-toggle" class="icon-button theme-toggle" aria-label="Включить тёмную тему" aria-pressed="false"></button><button id="files-button" class="button button-outline"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7V5h6l2 2h8v12H4z"/></svg><span>Ответы</span></button></div></header>
 <div id="storage-warning" class="notice" hidden>Сохранение в браузере недоступно. Сохрани ответы файлом перед закрытием.</div>
 <div id="file-note" class="notice" hidden>На iPhone можно <a href="https://deiteriys-dotcom.github.io/o-vazhnom/">открыть анкету в Safari</a>.</div>
-<div id="other-banner" class="other-banner" hidden><span>Ответы другого человека</span><div class="review-actions"><button id="restore-own" class="text-button">Это моя копия</button><button id="return-own" class="text-button">Вернуться к своим</button></div></div>
+<div id="other-banner" class="other-banner" hidden><span id="other-label">Ответы другого человека</span><div class="review-actions"><button id="compare-answers" class="text-button" aria-pressed="false">Сравнить с моими</button><button id="restore-own" class="text-button">Это моя копия</button><button id="return-own" class="text-button">Вернуться к своим</button></div></div>
 <main>
 <section class="intro" id="intro" aria-labelledby="page-title"><div class="intro-art" aria-hidden="true"><span></span><span></span></div><p class="eyebrow">Личная анкета</p><h1 id="page-title">О родительстве<br>и вашем будущем</h1><p class="intro-description">83 вопроса. Можно заполнить за несколько раз.<br>Ответы сохраняются на устройстве.</p><button id="continue-button" class="button button-primary">Начать заполнение</button></section>
 <section id="question-section" class="wizard" aria-label="Вопрос анкеты" tabindex="-1" hidden><div class="wizard-meta"><span id="section-title"></span><span id="question-counter"></span></div><div class="wizard-progress" role="progressbar" aria-label="Положение в анкете" aria-valuemin="1" aria-valuemax="83" id="wizard-progress"><span id="wizard-progress-fill"></span></div><div class="section-view-controls"><button id="section-view-toggle" class="button button-outline section-view-toggle" aria-pressed="false">Специально для жены</button></div><div id="question-list"></div><div class="wizard-navigation"><button id="previous-button" class="button button-outline">Назад</button><span id="save-state" class="save-state" role="status" aria-live="polite">Сохранение на устройстве</span><button id="next-button" class="button button-primary">Дальше</button></div></section>
@@ -82,9 +87,10 @@ let toastTimer;
 let downloadURL;
 let pendingFile;
 let confirmAction;
-let wholeSection = false;
+let allQuestions = false;
 let importMode = 'other';
 let viewingOther = false;
+let comparingAnswers = false;
 let ownState = null;
 let renderVersion = 0;
 const freshState = () => ({format:'o-vazhnom-answers',version:1,questionnaireId:DATA.id,updatedAt:new Date().toISOString(),activeSection:0,activeQuestion:0,answers:{}});
@@ -181,6 +187,9 @@ function updateProgress() {
   $('completion-title').textContent = done === 83 ? 'Анкета заполнена' : 'Ответы сохранены';
   $('completion-count').textContent = 'Заполнено ' + done + ' из 83 вопросов';
   $('other-banner').hidden = !viewingOther;
+  $('other-label').textContent = comparingAnswers ? 'Сравнение ответов' : 'Ответы другого человека';
+  $('compare-answers').textContent = comparingAnswers ? 'Только загруженные' : 'Сравнить с моими';
+  $('compare-answers').setAttribute('aria-pressed',String(comparingAnswers));
   document.body.classList.toggle('viewing-other',viewingOther);
   if (viewingOther) $('save-state').textContent = 'Просмотр';
   updatePickers();
@@ -199,7 +208,7 @@ function updatePickers() {
   const section = DATA.sections[topicIndex];
   const percent = Math.round(section.questions.filter(isComplete).length / section.questions.length * 100);
   $('topic-picker-label').textContent = 'Тема ' + (topicIndex+1) + ' · ' + percent + '%';
-  $('question-picker-label').textContent = wholeSection ? 'К вопросу' : answerStatus(current) + ' ' + (current.extra ? 'Доп. вопрос ' : 'Вопрос ') + current.number;
+  $('question-picker-label').textContent = answerStatus(current) + ' ' + (current.extra ? 'Доп. вопрос ' : 'Вопрос ') + current.number;
 }
 
 function openJumpMenu(kind) {
@@ -249,46 +258,63 @@ function fieldHTML(q, f) {
   return '<div class="field' + (f.comment ? ' comment-field' : '') + '" data-field="' + f.key + '"' + (f.comment ? ' id="' + q.id + '-comment-field"' + (hasValue(value) ? '' : ' hidden') : '') + '>' + label + input + '</div>';
 }
 
+function comparisonHTML(q) {
+  const mine = ownState.answers[q.id] || {};
+  const theirs = state.answers[q.id] || {};
+  const answerHTML = (field,value) => {
+    if (!hasValue(value)) return '<span class="comparison-empty">Нет ответа</span>';
+    if (field.type === 'scale') return '<strong>' + value + ' / 10</strong>';
+    if (field.type === 'ranking') return '<ol>' + value.order.map(i => '<li>' + escapeHTML(field.options[i]) + '</li>').join('') + '</ol>' + (value.excluded.length ? '<p class="comparison-excluded">Исключено: ' + value.excluded.map(i => escapeHTML(field.options[i])).join(', ') + '</p>' : '');
+    if (field.type === 'multi') return value.map(escapeHTML).join('<br>');
+    return escapeHTML(value);
+  };
+  const comparable = (field,value) => !hasValue(value) ? '' : JSON.stringify(field.type === 'multi' ? [...value].sort() : value);
+  const fields = q.fields.filter(f => !f.optional || hasValue(mine[f.key]) || hasValue(theirs[f.key]));
+  return '<table class="answer-comparison"><caption class="sr-only">Сравнение ответов</caption><thead><tr><th scope="col">Мои</th><th scope="col">Загруженные</th></tr></thead><tbody>' + fields.map(f => {
+    const label = f.criterion ? (fields.filter(field => !field.comment).length === 1 ? f.criterion : f.label + ' · ' + f.criterion) : f.label;
+    const different = comparable(f,mine[f.key]) !== comparable(f,theirs[f.key]);
+    return '<tr><th colspan="2" class="comparison-label">' + escapeHTML(label) + '</th></tr><tr class="comparison-values' + (different ? ' different' : '') + '" data-compare-field="' + f.key + '"><td>' + answerHTML(f,mine[f.key]) + '</td><td>' + answerHTML(f,theirs[f.key]) + '</td></tr>';
+  }).join('') + '</tbody></table>';
+}
+
 function questionCardHTML(q,includePickers) {
   const details = q.instructions.filter(t => !/^(Дай ответ цифрой|Дай развернутый|Ответь МОГ|Поставь оценку|Назови цифру|Назови сколько таких|Вариант [12]\.|И, как думаешь|Как думаешь, насколько готов|Если пока не готов|И укажи ребенок|Укажи ребенок)/.test(t));
   const title = q.text.replace(/\s*Дай ответ цифрой от 1 до 10.*$/, '');
   const extra = !details.length ? '' : q.id === 'q40' ? '<details class="instructions"><summary>Группы здоровья</summary>' + details.map(t => '<p>' + escapeHTML(t) + '</p>').join('') + '</details>' : '<div class="question-description">' + details.map(t => '<p>' + escapeHTML(t) + '</p>').join('') + '</div>';
-  const hasComment = q.fields.some(f => f.comment);
+  const hasComment = !comparingAnswers && q.fields.some(f => f.comment);
   const commentOpen = hasValue((state.answers[q.id] || {}).comment);
   const pencil = !hasComment ? '' : '<button class="comment-toggle icon-button" data-comment-toggle aria-label="Комментарий к вопросу" aria-controls="' + q.id + '-comment-field" aria-expanded="' + commentOpen + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4 5 5M4 20l5-1 11-11a2 2 0 0 0-5-5L4 14z"/></svg></button>';
   const pickers = '<div class="card-switchers"><button id="topic-picker" class="picker-button" aria-haspopup="dialog" aria-controls="jump-dialog"><span id="topic-picker-label"></span><i aria-hidden="true"></i></button><button id="question-picker" class="picker-button" aria-haspopup="dialog" aria-controls="jump-dialog"><span id="question-picker-label"></span><i aria-hidden="true"></i></button>' + pencil + '</div>';
   const orderedFields = [...q.fields.filter(f => f.comment),...q.fields.filter(f => !f.comment)];
-  const number = wholeSection ? '<div class="section-question-number">' + (q.extra ? 'Доп. вопрос ' : 'Вопрос ') + q.number + '</div>' : '';
+  const number = allQuestions ? '<div class="section-question-number">' + (q.extra ? 'Доп. вопрос ' : 'Вопрос ') + q.number + '</div>' : '';
   const controls = includePickers ? pickers + number : '<div class="section-question-heading">' + number + pencil + '</div>';
-  const tag = wholeSection ? 'h2' : 'h1';
-  return '<article class="question-card" id="question-' + q.id + '" data-question="' + q.id + '">' + controls + '<' + tag + ' class="question-text">' + escapeHTML(title) + '</' + tag + '>' + extra + '<div class="answer-fields">' + orderedFields.map(f => fieldHTML(q,f)).join('') + '</div></article>';
+  const tag = allQuestions ? 'h3' : 'h1';
+  return '<article class="question-card" id="question-' + q.id + '" data-question="' + q.id + '">' + controls + '<' + tag + ' class="question-text">' + escapeHTML(title) + '</' + tag + '>' + extra + '<div class="answer-fields">' + (comparingAnswers ? comparisonHTML(q) : orderedFields.map(f => fieldHTML(q,f)).join('')) + '</div></article>';
 }
 
 function renderQuestion(scroll = false, direction = 0) {
   renderVersion++;
   const q = QUESTIONS[state.activeQuestion];
   const section = DATA.sections.find(s => s.questions.includes(q));
-  const sectionIndex = DATA.sections.indexOf(section);
-  const first = QUESTIONS.indexOf(section.questions[0]);
-  const last = first + section.questions.length;
-  $('section-title').textContent = section.title;
-  $('question-counter').textContent = wholeSection ? (first+1) + '–' + last + ' / 83' : (state.activeQuestion+1) + ' / 83';
-  $('wizard-progress-fill').style.width = ((wholeSection ? last : state.activeQuestion+1) / 83 * 100) + '%';
-  $('wizard-progress').setAttribute('aria-valuenow',wholeSection ? last : state.activeQuestion+1);
-  $('previous-button').disabled = wholeSection ? sectionIndex===0 : state.activeQuestion===0;
-  $('next-button').textContent = (wholeSection ? sectionIndex===9 : state.activeQuestion===82) ? 'Завершить' : 'Дальше';
-  $('section-view-toggle').setAttribute('aria-pressed',String(wholeSection));
-  $('section-view-toggle').title = wholeSection ? 'Вернуться к одному вопросу' : 'Показать весь раздел на одной странице';
-  document.body.classList.toggle('whole-section',wholeSection);
-  const visible = wholeSection ? section.questions : [q];
-  $('question-list').innerHTML = visible.map((question,index) => questionCardHTML(question,index===0)).join('');
+  $('section-title').textContent = allQuestions ? 'Все вопросы' : section.title;
+  $('question-counter').textContent = allQuestions ? '83 вопроса' : (state.activeQuestion+1) + ' / 83';
+  $('wizard-progress').hidden = allQuestions;
+  $('wizard-progress-fill').style.width = ((state.activeQuestion+1) / 83 * 100) + '%';
+  $('wizard-progress').setAttribute('aria-valuenow',state.activeQuestion+1);
+  $('previous-button').hidden = allQuestions;
+  $('previous-button').disabled = state.activeQuestion===0;
+  $('next-button').textContent = allQuestions || state.activeQuestion===82 ? 'Завершить' : 'Дальше';
+  $('section-view-toggle').setAttribute('aria-pressed',String(allQuestions));
+  $('section-view-toggle').title = allQuestions ? 'Вернуться к одному вопросу' : 'Показать все 83 вопроса на одной странице';
+  document.body.classList.toggle('all-questions',allQuestions);
+  $('question-list').innerHTML = allQuestions ? DATA.sections.map(topic => '<h2 class="document-topic">' + escapeHTML(topic.title) + '</h2>' + topic.questions.map(question => questionCardHTML(question,false)).join('')).join('') : questionCardHTML(q,true);
   if (viewingOther) {
     document.querySelectorAll('.answer-fields button,.answer-fields input').forEach(element => {element.disabled=true;});
     document.querySelectorAll('.answer-fields textarea').forEach(element => {element.readOnly=true;});
     document.querySelectorAll('.clear-answer').forEach(element => {element.hidden=true;});
   }
   updateProgress();
-  if (direction && !wholeSection && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (direction && !allQuestions && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelector('.question-card').animate([{transform:'translateX(' + (direction*34) + 'px) rotate(' + (direction*2) + 'deg)',opacity:.6},{transform:'translateX(0)',opacity:1}],{duration:190,easing:'cubic-bezier(.2,.7,.2,1)'});
   }
   if (scroll) {window.scrollTo({top:0,behavior:'instant'});$('question-section').focus({preventScroll:true});}
@@ -304,7 +330,7 @@ function showQuestion() {
 
 function setAnswer(q, f, value) {
   if (viewingOther) return;
-  if (wholeSection) {state.activeQuestion=QUESTIONS.indexOf(q);state.activeSection=DATA.sections.findIndex(section=>section.questions.includes(q));}
+  if (allQuestions) {state.activeQuestion=QUESTIONS.indexOf(q);state.activeSection=DATA.sections.findIndex(section=>section.questions.includes(q));}
   if (!state.answers[q.id]) state.answers[q.id] = {};
   if (value === undefined || value === '' || Array.isArray(value) && !value.length) delete state.answers[q.id][f.key];
   else state.answers[q.id][f.key] = value;
@@ -320,7 +346,7 @@ function goQuestion(index) {
   state.activeSection = DATA.sections.findIndex(section => section.questions.includes(current));
   persist(false);
   renderQuestion(true,direction);
-  if(wholeSection) $('question-'+current.id).scrollIntoView({block:'start',behavior:'instant'});
+  if(allQuestions) $('question-'+current.id).scrollIntoView({block:'start',behavior:'instant'});
 }
 
 $('question-list').addEventListener('click', e => {
@@ -446,6 +472,7 @@ function openOtherAnswers(text) {
   } catch (error) { showToast(error instanceof SyntaxError ? 'Не удалось прочитать JSON-файл.' : error.message); return false; }
   if (!viewingOther) { persist(false); ownState = state; }
   viewingOther = true;
+  comparingAnswers = false;
   state = candidate;
   $('files-dialog').close();
   showQuestion();
@@ -456,10 +483,12 @@ function returnToOwn() {
   state = ownState;
   ownState = null;
   viewingOther = false;
+  comparingAnswers = false;
   showQuestion();
   $('save-state').textContent = storageOK ? 'Сохранено' : 'Сохрани файлом';
 }
 $('return-own').onclick = returnToOwn;
+$('compare-answers').onclick = () => {if(viewingOther){comparingAnswers=!comparingAnswers;renderQuestion();}};
 $('restore-own').onclick = () => { const copy = JSON.stringify(state); returnToOwn(); importAnswers(copy); };
 window.receiveImportedAnswers = (text,mode=importMode) => mode==='own' ? importAnswers(text) : openOtherAnswers(text);
 window.nativeFileResult = (success,message) => showToast(message || (success ? 'Файл сохранён' : 'Не удалось сохранить файл'));
@@ -521,17 +550,10 @@ $('import-file').onchange = async e => {
 $('files-button').onclick = () => openDialog('files-dialog');
 $('home').onclick = e => { e.preventDefault(); $('intro').hidden = false; $('question-section').hidden = true; $('completion-screen').hidden = true; window.scrollTo({top:0,behavior:'instant'}); };
 $('continue-button').onclick = showQuestion;
-function stepQuestion(step) {
-  if(!wholeSection){goQuestion(state.activeQuestion+step);return;}
-  const section=DATA.sections.findIndex(s=>s.questions.includes(QUESTIONS[state.activeQuestion]));
-  const next=DATA.sections[section+step];
-  if(next)goQuestion(QUESTIONS.indexOf(next.questions[0]));
-}
-$('section-view-toggle').onclick = () => {wholeSection=!wholeSection;renderQuestion(true);};
-$('previous-button').onclick = () => stepQuestion(-1);
+$('section-view-toggle').onclick = () => {allQuestions=!allQuestions;renderQuestion(true);};
+$('previous-button').onclick = () => goQuestion(state.activeQuestion-1);
 $('next-button').onclick = () => {
-  const last = wholeSection ? DATA.sections[9].questions.includes(QUESTIONS[state.activeQuestion]) : state.activeQuestion===82;
-  if (!last) stepQuestion(1);
+  if (!allQuestions && state.activeQuestion<82) goQuestion(state.activeQuestion+1);
   else {
     $('question-section').hidden = true;
     $('completion-screen').hidden = false;
@@ -563,7 +585,7 @@ function finishSwipe(dx,card) {
   animation.finished.then(flip).catch(() => {swipeAnimating=false;resetDrag(card);});
 }
 $('question-section').addEventListener('pointerdown', e => {
-  if (wholeSection || swipeAnimating || !e.isPrimary || e.button !== 0 || e.target.closest('input,textarea,button,a,details,.ranking-list')) return;
+  if (allQuestions || swipeAnimating || !e.isPrimary || e.button !== 0 || e.target.closest('input,textarea,button,a,details,.ranking-list')) return;
   const card = e.target.closest('.question-card');
   if (!card) return;
   card.getAnimations().forEach(animation => animation.cancel());
