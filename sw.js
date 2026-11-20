@@ -1,5 +1,5 @@
 'use strict';
-const CACHE = 'o-vazhnom-v6';
+const CACHE = 'o-vazhnom-v7';
 const ASSETS = ['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS.map(asset => new Request(asset,{cache:'reload'})))).then(() => self.skipWaiting())));
 self.addEventListener('activate',event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith('o-vazhnom-') && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())));
