@@ -42,6 +42,9 @@ dialog{border:1px solid var(--line);border-radius:23px;padding:27px;max-width:50
 html,body{overscroll-behavior-x:contain}.question-card{touch-action:pan-y pinch-zoom;transform-origin:50% 80%}.question-card.dragging{user-select:none;-webkit-user-select:none;will-change:transform,opacity}
 
 .jump-overall{display:grid;grid-template-columns:1fr auto;gap:6px 15px;padding:0 3px 20px;margin-bottom:8px;color:var(--muted);font-size:.78rem}.jump-overall strong{font-weight:550;color:var(--ink)}.jump-overall .overall-count{font-size:.69rem;grid-column:1/-1}.jump-overall .jump-meter{height:4px}.nojs-card{max-width:500px;margin:60px auto;padding:30px;text-align:center}.nojs-card p{margin:20px 0;color:var(--muted);font-size:.9rem}
+
+.section-view-controls{display:flex;justify-content:flex-end;margin:-6px 0 18px;position:sticky;top:105px;z-index:12;padding:8px 0;background:var(--bg)}.section-view-toggle{font-size:.78rem;min-height:40px;padding:8px 15px}.section-view-toggle[aria-pressed="true"]{background:#e5eedc;border-color:#91aa7b;color:#31522d}.section-question-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}.section-question-number{font-size:.74rem;color:var(--muted);margin-bottom:15px}.section-question-heading .section-question-number{margin-bottom:0}.whole-section .question-card{margin-bottom:18px;touch-action:pan-y pinch-zoom}.whole-section .question-card{scroll-margin-top:175px}[data-theme="dark"] .section-view-toggle[aria-pressed="true"]{background:#34492d;color:#d5e6bf;border-color:#8fa77b}
+@media(max-width:600px){.section-view-controls{top:88px;margin-bottom:15px}.section-view-toggle{font-size:.73rem;min-height:39px}.whole-section .question-card{scroll-margin-top:155px}}
 </style>
 </head>
 <body>
@@ -51,10 +54,10 @@ html,body{overscroll-behavior-x:contain}.question-card{touch-action:pan-y pinch-
 <div id="other-banner" class="other-banner" hidden><span>Ответы другого человека</span><div class="review-actions"><button id="restore-own" class="text-button">Это моя копия</button><button id="return-own" class="text-button">Вернуться к своим</button></div></div>
 <main>
 <section class="intro" id="intro" aria-labelledby="page-title"><div class="intro-art" aria-hidden="true"><span></span><span></span></div><p class="eyebrow">Личная анкета</p><h1 id="page-title">О родительстве<br>и вашем будущем</h1><p class="intro-description">83 вопроса. Можно заполнить за несколько раз.<br>Ответы сохраняются на устройстве.</p><button id="continue-button" class="button button-primary">Начать заполнение</button></section>
-<section id="question-section" class="wizard" aria-label="Вопрос анкеты" tabindex="-1" hidden><div class="wizard-meta"><span id="section-title"></span><span id="question-counter"></span></div><div class="wizard-progress" role="progressbar" aria-label="Положение в анкете" aria-valuemin="1" aria-valuemax="83" id="wizard-progress"><span id="wizard-progress-fill"></span></div><div id="question-list"></div><div class="wizard-navigation"><button id="previous-button" class="button button-outline">Назад</button><span id="save-state" class="save-state" role="status" aria-live="polite">Сохранение на устройстве</span><button id="next-button" class="button button-primary">Дальше</button></div></section>
+<section id="question-section" class="wizard" aria-label="Вопрос анкеты" tabindex="-1" hidden><div class="wizard-meta"><span id="section-title"></span><span id="question-counter"></span></div><div class="wizard-progress" role="progressbar" aria-label="Положение в анкете" aria-valuemin="1" aria-valuemax="83" id="wizard-progress"><span id="wizard-progress-fill"></span></div><div class="section-view-controls"><button id="section-view-toggle" class="button button-outline section-view-toggle" aria-pressed="false">Специально для жены</button></div><div id="question-list"></div><div class="wizard-navigation"><button id="previous-button" class="button button-outline">Назад</button><span id="save-state" class="save-state" role="status" aria-live="polite">Сохранение на устройстве</span><button id="next-button" class="button button-primary">Дальше</button></div></section>
 <section id="completion-screen" class="completion" hidden><span class="completion-mark" aria-hidden="true">✓</span><h1 id="completion-title">Ответы сохранены</h1><p id="completion-count"></p><div class="completion-actions"><button id="completion-export" class="button button-primary">Сохранить в файл</button><button id="completion-resume" class="button button-outline">Вернуться к вопросам</button></div></section>
 </main>
-<dialog id="files-dialog" aria-labelledby="files-title"><div class="dialog-head"><h2 id="files-title">Ответы</h2><button class="icon-button close-dialog" aria-label="Закрыть">×</button></div><p id="file-summary" class="file-summary"></p><div class="file-actions"><button id="export-json" class="file-action"><span class="file-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-4 4 4-4 4 4M5 12v8h14v-8"/></svg></span><strong>Поделиться ответами</strong></button><button id="import-other" class="file-action"><span class="file-icon person-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg></span><strong>Посмотреть ответы другого человека</strong></button><button id="export-html" class="file-action"><span class="file-icon">HTML</span><strong>Сохранить HTML</strong></button></div></dialog>
+<dialog id="files-dialog" aria-labelledby="files-title"><div class="dialog-head"><h2 id="files-title">Ответы</h2><button class="icon-button close-dialog" aria-label="Закрыть">×</button></div><p id="file-summary" class="file-summary"></p><div class="file-actions"><button id="export-json" class="file-action"><span class="file-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-4 4 4-4 4 4M5 12v8h14v-8"/></svg></span><strong>Поделиться ответами</strong></button><button id="import-own" class="file-action"><span class="file-icon">JSON</span><strong>Загрузить свои ответы</strong></button><button id="import-other" class="file-action"><span class="file-icon person-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg></span><strong>Посмотреть ответы другого человека</strong></button><button id="download-json" class="file-action"><span class="file-icon">JSON</span><strong>Скачать JSON</strong></button></div></dialog>
 <dialog id="jump-dialog" class="jump-dialog" aria-labelledby="jump-title"><div class="dialog-head"><h2 id="jump-title"></h2><button class="icon-button close-dialog" aria-label="Закрыть">×</button></div><div id="jump-overall" class="jump-overall"></div><div id="jump-options" class="jump-options"></div></dialog>
 <dialog id="confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-head"><h2 id="confirm-title"></h2><button class="icon-button" id="cancel-cross" aria-label="Закрыть">×</button></div><p id="confirm-message"></p><div class="dialog-bottom"><button id="confirm-cancel" class="button button-outline">Отмена</button><button id="confirm-ok" class="button button-primary">Продолжить</button></div></dialog>
 <dialog id="download-dialog" aria-labelledby="download-title"><div class="dialog-head"><h2 id="download-title">Файл готов</h2><button class="icon-button close-dialog" aria-label="Закрыть">×</button></div><div class="download-actions"><a id="download-link" class="button button-primary">Скачать файл</a><button id="share-file" class="button button-outline">Поделиться</button></div><p class="small-note" id="download-name"></p></dialog>
@@ -77,14 +80,15 @@ let toastTimer;
 let downloadURL;
 let pendingFile;
 let confirmAction;
-let started = false;
+let wholeSection = false;
+let importMode = 'other';
 let viewingOther = false;
 let ownState = null;
 let renderVersion = 0;
 const freshState = () => ({format:'o-vazhnom-answers',version:1,questionnaireId:DATA.id,updatedAt:new Date().toISOString(),activeSection:0,activeQuestion:0,answers:{}});
 
 function validateState(input) {
-  if (!input || input.format !== 'o-vazhnom-answers' || input.version !== 1 || input.questionnaireId !== DATA.id) throw new Error('Это не файл ответов для этой анкеты. Выбери JSON, сохранённый кнопкой «Сохранить ответы».');
+  if (!input || input.format !== 'o-vazhnom-answers' || input.version !== 1 || input.questionnaireId !== DATA.id) throw new Error('Это не файл ответов для этой анкеты. Выбери JSON, сохранённый кнопкой «Скачать JSON».');
   if (!input.answers || typeof input.answers !== 'object' || Array.isArray(input.answers)) throw new Error('В файле нет корректного списка ответов.');
   const clean = freshState();
   if (typeof input.updatedAt === 'string' && Number.isFinite(Date.parse(input.updatedAt))) clean.updatedAt = input.updatedAt;
@@ -193,7 +197,7 @@ function updatePickers() {
   const section = DATA.sections[topicIndex];
   const percent = Math.round(section.questions.filter(isComplete).length / section.questions.length * 100);
   $('topic-picker-label').textContent = 'Тема ' + (topicIndex+1) + ' · ' + percent + '%';
-  $('question-picker-label').textContent = answerStatus(current) + ' ' + (current.extra ? 'Доп. вопрос ' : 'Вопрос ') + current.number;
+  $('question-picker-label').textContent = wholeSection ? 'К вопросу' : answerStatus(current) + ' ' + (current.extra ? 'Доп. вопрос ' : 'Вопрос ') + current.number;
 }
 
 function openJumpMenu(kind) {
@@ -240,42 +244,55 @@ function fieldHTML(q, f) {
     input = '<input class="number-input" id="' + uid + '" type="number" inputmode="numeric" min="0" max="' + f.max + '" step="1" value="' + (value === undefined ? '' : value) + '" placeholder="0">';
   } else if (f.type === 'ranking') input = rankingHTML(q, f, value);
   if (['scale','choice','multi'].includes(f.type)) input += '<button type="button" class="clear-answer" data-clear' + (hasValue(value) ? '' : ' hidden') + '>Сбросить ответ</button>';
-  return '<div class="field' + (f.comment ? ' comment-field' : '') + '" data-field="' + f.key + '"' + (f.comment ? ' id="comment-field"' + (hasValue(value) ? '' : ' hidden') : '') + '>' + label + input + '</div>';
+  return '<div class="field' + (f.comment ? ' comment-field' : '') + '" data-field="' + f.key + '"' + (f.comment ? ' id="' + q.id + '-comment-field"' + (hasValue(value) ? '' : ' hidden') : '') + '>' + label + input + '</div>';
+}
+
+function questionCardHTML(q,includePickers) {
+  const details = q.instructions.filter(t => !/^(Дай ответ цифрой|Дай развернутый|Ответь МОГ|Поставь оценку|Назови цифру|Назови сколько таких|Вариант [12]\.|И, как думаешь|Как думаешь, насколько готов|Если пока не готов|И укажи ребенок|Укажи ребенок)/.test(t));
+  const title = q.text.replace(/\s*Дай ответ цифрой от 1 до 10.*$/, '');
+  const extra = !details.length ? '' : q.id === 'q40' ? '<details class="instructions"><summary>Группы здоровья</summary>' + details.map(t => '<p>' + escapeHTML(t) + '</p>').join('') + '</details>' : '<div class="question-description">' + details.map(t => '<p>' + escapeHTML(t) + '</p>').join('') + '</div>';
+  const hasComment = q.fields.some(f => f.comment);
+  const commentOpen = hasValue((state.answers[q.id] || {}).comment);
+  const pencil = !hasComment ? '' : '<button class="comment-toggle icon-button" data-comment-toggle aria-label="Комментарий к вопросу" aria-controls="' + q.id + '-comment-field" aria-expanded="' + commentOpen + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4 5 5M4 20l5-1 11-11a2 2 0 0 0-5-5L4 14z"/></svg></button>';
+  const pickers = '<div class="card-switchers"><button id="topic-picker" class="picker-button" aria-haspopup="dialog" aria-controls="jump-dialog"><span id="topic-picker-label"></span><i aria-hidden="true"></i></button><button id="question-picker" class="picker-button" aria-haspopup="dialog" aria-controls="jump-dialog"><span id="question-picker-label"></span><i aria-hidden="true"></i></button>' + pencil + '</div>';
+  const orderedFields = [...q.fields.filter(f => f.comment),...q.fields.filter(f => !f.comment)];
+  const number = wholeSection ? '<div class="section-question-number">' + (q.extra ? 'Доп. вопрос ' : 'Вопрос ') + q.number + '</div>' : '';
+  const controls = includePickers ? pickers + number : '<div class="section-question-heading">' + number + pencil + '</div>';
+  const tag = wholeSection ? 'h2' : 'h1';
+  return '<article class="question-card" id="question-' + q.id + '" data-question="' + q.id + '">' + controls + '<' + tag + ' class="question-text">' + escapeHTML(title) + '</' + tag + '>' + extra + '<div class="answer-fields">' + orderedFields.map(f => fieldHTML(q,f)).join('') + '</div></article>';
 }
 
 function renderQuestion(scroll = false, direction = 0) {
   renderVersion++;
   const q = QUESTIONS[state.activeQuestion];
   const section = DATA.sections.find(s => s.questions.includes(q));
+  const sectionIndex = DATA.sections.indexOf(section);
+  const first = QUESTIONS.indexOf(section.questions[0]);
+  const last = first + section.questions.length;
   $('section-title').textContent = section.title;
-  $('question-counter').textContent = (state.activeQuestion + 1) + ' / 83';
-  $('wizard-progress-fill').style.width = ((state.activeQuestion + 1) / 83 * 100) + '%';
-  $('wizard-progress').setAttribute('aria-valuenow',state.activeQuestion + 1);
-  $('previous-button').disabled = state.activeQuestion === 0;
-  $('next-button').textContent = state.activeQuestion === 82 ? 'Завершить' : 'Дальше';
-  const details = q.instructions.filter(t => !/^(Дай ответ цифрой|Дай развернутый|Ответь МОГ|Поставь оценку|Назови цифру|Назови сколько таких|Вариант [12]\.|И, как думаешь|Как думаешь, насколько готов|Если пока не готов|И укажи ребенок|Укажи ребенок)/.test(t));
-  const title = q.text.replace(/\s*Дай ответ цифрой от 1 до 10.*$/, '');
-  const extra = !details.length ? '' : q.id === 'q40' ? '<details class="instructions"><summary>Группы здоровья</summary>' + details.map(t => '<p>' + escapeHTML(t) + '</p>').join('') + '</details>' : '<div class="question-description">' + details.map(t => '<p>' + escapeHTML(t) + '</p>').join('') + '</div>';
-  const hasComment = q.fields.some(f => f.comment);
-  const commentOpen = hasValue((state.answers[q.id] || {}).comment);
-  const pencil = !hasComment ? '' : '<button class="comment-toggle icon-button" data-comment-toggle aria-label="Комментарий к вопросу" aria-controls="comment-field" aria-expanded="' + commentOpen + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4 5 5M4 20l5-1 11-11a2 2 0 0 0-5-5L4 14z"/></svg></button>';
-  const pickers = '<div class="card-switchers"><button id="topic-picker" class="picker-button" aria-haspopup="dialog" aria-controls="jump-dialog"><span id="topic-picker-label"></span><i aria-hidden="true"></i></button><button id="question-picker" class="picker-button" aria-haspopup="dialog" aria-controls="jump-dialog"><span id="question-picker-label"></span><i aria-hidden="true"></i></button>' + pencil + '</div>';
-  const orderedFields = [...q.fields.filter(f => f.comment),...q.fields.filter(f => !f.comment)];
-  $('question-list').innerHTML = '<article class="question-card" id="question-' + q.id + '" data-question="' + q.id + '">' + pickers + '<h1 class="question-text">' + escapeHTML(title) + '</h1>' + extra + '<div class="answer-fields">' + orderedFields.map(f => fieldHTML(q,f)).join('') + '</div></article>';
+  $('question-counter').textContent = wholeSection ? (first+1) + '–' + last + ' / 83' : (state.activeQuestion+1) + ' / 83';
+  $('wizard-progress-fill').style.width = ((wholeSection ? last : state.activeQuestion+1) / 83 * 100) + '%';
+  $('wizard-progress').setAttribute('aria-valuenow',wholeSection ? last : state.activeQuestion+1);
+  $('previous-button').disabled = wholeSection ? sectionIndex===0 : state.activeQuestion===0;
+  $('next-button').textContent = (wholeSection ? sectionIndex===9 : state.activeQuestion===82) ? 'Завершить' : 'Дальше';
+  $('section-view-toggle').setAttribute('aria-pressed',String(wholeSection));
+  $('section-view-toggle').title = wholeSection ? 'Вернуться к одному вопросу' : 'Показать весь раздел на одной странице';
+  document.body.classList.toggle('whole-section',wholeSection);
+  const visible = wholeSection ? section.questions : [q];
+  $('question-list').innerHTML = visible.map((question,index) => questionCardHTML(question,index===0)).join('');
   if (viewingOther) {
-    document.querySelectorAll('.answer-fields button,.answer-fields input').forEach(element => { element.disabled = true; });
-    document.querySelectorAll('.answer-fields textarea').forEach(element => { element.readOnly = true; });
-    document.querySelectorAll('.clear-answer').forEach(element => { element.hidden = true; });
+    document.querySelectorAll('.answer-fields button,.answer-fields input').forEach(element => {element.disabled=true;});
+    document.querySelectorAll('.answer-fields textarea').forEach(element => {element.readOnly=true;});
+    document.querySelectorAll('.clear-answer').forEach(element => {element.hidden=true;});
   }
   updateProgress();
-  if (direction && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (direction && !wholeSection && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelector('.question-card').animate([{transform:'translateX(' + (direction*34) + 'px) rotate(' + (direction*2) + 'deg)',opacity:.6},{transform:'translateX(0)',opacity:1}],{duration:190,easing:'cubic-bezier(.2,.7,.2,1)'});
   }
-  if (scroll) { window.scrollTo({top:0,behavior:'instant'}); $('question-section').focus({preventScroll:true}); }
+  if (scroll) {window.scrollTo({top:0,behavior:'instant'});$('question-section').focus({preventScroll:true});}
 }
 
 function showQuestion() {
-  started = true;
   $('intro').hidden = true;
   $('completion-screen').hidden = true;
   $('question-section').hidden = false;
@@ -285,6 +302,7 @@ function showQuestion() {
 
 function setAnswer(q, f, value) {
   if (viewingOther) return;
+  if (wholeSection) {state.activeQuestion=QUESTIONS.indexOf(q);state.activeSection=DATA.sections.findIndex(section=>section.questions.includes(q));}
   if (!state.answers[q.id]) state.answers[q.id] = {};
   if (value === undefined || value === '' || Array.isArray(value) && !value.length) delete state.answers[q.id][f.key];
   else state.answers[q.id][f.key] = value;
@@ -300,6 +318,7 @@ function goQuestion(index) {
   state.activeSection = DATA.sections.findIndex(section => section.questions.includes(current));
   persist(false);
   renderQuestion(true,direction);
+  if(wholeSection) $('question-'+current.id).scrollIntoView({block:'start',behavior:'instant'});
 }
 
 $('question-list').addEventListener('click', e => {
@@ -307,7 +326,7 @@ $('question-list').addEventListener('click', e => {
   if (!button) return;
   if (button.id === 'topic-picker' || button.id === 'question-picker') { openJumpMenu(button.id === 'topic-picker' ? 'topic' : 'question'); return; }
   if (button.hasAttribute('data-comment-toggle')) {
-    const field = $('comment-field');
+    const field = $(button.getAttribute('aria-controls'));
     field.hidden = !field.hidden;
     button.setAttribute('aria-expanded',String(!field.hidden));
     const area = field.querySelector('textarea');
@@ -377,12 +396,12 @@ $('question-list').addEventListener('pointerup', e => {
 $('jump-options').addEventListener('click', e => {
   const button = e.target.closest('button');
   if (!button) return;
+  $('jump-dialog').close();
   if (button.dataset.jumpQuestion) goQuestion(QUESTIONS.findIndex(q => q.id === button.dataset.jumpQuestion));
   else {
     const section = DATA.sections[Number(button.dataset.jumpTopic)];
     goQuestion(QUESTIONS.indexOf(section.questions.find(q => !isComplete(q)) || section.questions[0]));
   }
-  $('jump-dialog').close();
 });
 
 function openDialog(id) { if (!$(id).open) $(id).showModal(); }
@@ -440,27 +459,17 @@ function returnToOwn() {
 }
 $('return-own').onclick = returnToOwn;
 $('restore-own').onclick = () => { const copy = JSON.stringify(state); returnToOwn(); importAnswers(copy); };
-window.receiveImportedAnswers = openOtherAnswers;
+window.receiveImportedAnswers = (text,mode=importMode) => mode==='own' ? importAnswers(text) : openOtherAnswers(text);
 window.nativeFileResult = (success,message) => showToast(message || (success ? 'Файл сохранён' : 'Не удалось сохранить файл'));
 
-function filledHTML() {
-  const doc = document.documentElement.cloneNode(true);
-  doc.querySelector('#embedded-answers').textContent = JSON.stringify(state).replace(/</g,'\\u003c');
-  doc.querySelectorAll('dialog').forEach(d => d.removeAttribute('open'));
-  doc.querySelector('#toast').setAttribute('hidden','');
-  // Runtime markup is rebuilt from the embedded answers when the file is opened.
-  doc.querySelector('#question-list').replaceChildren();
-  doc.querySelectorAll('link[rel="manifest"],link[rel="apple-touch-icon"]').forEach(node => node.remove());
-  return '<!doctype html>\n' + doc.outerHTML;
-}
-
-function prepareExport(kind) {
+function prepareExport(downloadOnly = false) {
   const date = new Date().toISOString().slice(0,10);
   const prefix = viewingOther ? 'o-vazhnom-other-' : 'o-vazhnom-';
-  let content, type, name;
-  if (kind === 'json') { content = JSON.stringify(state,null,2); type='application/json'; name=prefix + 'answers-' + date + '.json'; }
-  else { content = filledHTML(); type='text/html'; name=prefix + 'filled-' + date + '.html'; }
+  const content = JSON.stringify(state,null,2);
+  const type = 'application/json';
+  const name = prefix + 'answers-' + date + '.json';
   if (native) {
+    if (downloadOnly) { native.exportFile(name,type,content); return; }
     pendingFile = {name,type,content};
     $('download-link').href = '#';
     $('download-link').removeAttribute('download');
@@ -480,6 +489,7 @@ function prepareExport(kind) {
   let canShare = false;
   try { canShare = !!navigator.canShare && navigator.canShare({files:[new File([blob],name,{type})]}); } catch {}
   $('share-file').hidden = !canShare;
+  if (downloadOnly) { $('download-link').click(); return; }
   openDialog('download-dialog');
 }
 $('share-file').onclick = async () => {
@@ -488,23 +498,38 @@ $('share-file').onclick = async () => {
   try { await navigator.share({files:[new File([pendingFile.blob],pendingFile.name,{type:pendingFile.type})]}); }
   catch (error) { if (error.name !== 'AbortError') showToast('Не удалось открыть меню. Используй кнопку «Скачать файл».'); }
 };
-$('export-json').onclick = () => prepareExport('json');
-$('export-html').onclick = () => prepareExport('html');
-$('import-other').onclick = () => { native ? native.importFile() : $('import-file').click(); };
+$('export-json').onclick = () => prepareExport();
+$('download-json').onclick = () => prepareExport(true);
+function chooseImport(mode) {
+  if(mode==='own' && viewingOther)returnToOwn();
+  importMode=mode;
+  native ? native.importFile(mode) : $('import-file').click();
+}
+$('import-own').onclick = () => chooseImport('own');
+$('import-other').onclick = () => chooseImport('other');
 $('import-file').onchange = async e => {
   const file = e.target.files[0];
+  const mode = importMode;
   if (file) {
     if (file.size > MAX_IMPORT_BYTES) showToast('Файл слишком большой. Максимальный размер 32 МБ.');
-    else try { window.receiveImportedAnswers(await file.text()); } catch { showToast('Не удалось открыть файл. Попробуй выбрать его ещё раз.'); }
+    else try { window.receiveImportedAnswers(await file.text(),mode); } catch { showToast('Не удалось открыть файл. Попробуй выбрать его ещё раз.'); }
   }
   e.target.value = '';
 };
 $('files-button').onclick = () => openDialog('files-dialog');
 $('home').onclick = e => { e.preventDefault(); $('intro').hidden = false; $('question-section').hidden = true; $('completion-screen').hidden = true; window.scrollTo({top:0,behavior:'instant'}); };
 $('continue-button').onclick = showQuestion;
-$('previous-button').onclick = () => goQuestion(state.activeQuestion - 1);
+function stepQuestion(step) {
+  if(!wholeSection){goQuestion(state.activeQuestion+step);return;}
+  const section=DATA.sections.findIndex(s=>s.questions.includes(QUESTIONS[state.activeQuestion]));
+  const next=DATA.sections[section+step];
+  if(next)goQuestion(QUESTIONS.indexOf(next.questions[0]));
+}
+$('section-view-toggle').onclick = () => {wholeSection=!wholeSection;renderQuestion(true);};
+$('previous-button').onclick = () => stepQuestion(-1);
 $('next-button').onclick = () => {
-  if (state.activeQuestion < 82) goQuestion(state.activeQuestion + 1);
+  const last = wholeSection ? DATA.sections[9].questions.includes(QUESTIONS[state.activeQuestion]) : state.activeQuestion===82;
+  if (!last) stepQuestion(1);
   else {
     $('question-section').hidden = true;
     $('completion-screen').hidden = false;
@@ -536,7 +561,7 @@ function finishSwipe(dx,card) {
   animation.finished.then(flip).catch(() => {swipeAnimating=false;resetDrag(card);});
 }
 $('question-section').addEventListener('pointerdown', e => {
-  if (swipeAnimating || !e.isPrimary || e.button !== 0 || e.target.closest('input,textarea,button,a,details,.ranking-list')) return;
+  if (wholeSection || swipeAnimating || !e.isPrimary || e.button !== 0 || e.target.closest('input,textarea,button,a,details,.ranking-list')) return;
   const card = e.target.closest('.question-card');
   if (!card) return;
   card.getAnimations().forEach(animation => animation.cancel());
