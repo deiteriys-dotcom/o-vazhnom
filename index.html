@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#214b42">
+<meta name="description" content="83 вопроса о родительстве и вашем будущем. Ответы сохраняются на устройстве.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<title>О важном · Личная анкета</title>
+<script>(()=>{try{const theme=window.AndroidAnswers&&window.AndroidAnswers.readTheme?window.AndroidAnswers.readTheme():localStorage.getItem('o-vazhnom.theme');if(theme==='dark')document.documentElement.dataset.theme='dark';}catch{}})();</script>
+<style>:root{color-scheme:light;--bg:#f5f6f4;--ink:#20332b;--muted:#6b786f;--line:#dce3dc;--green:#214b42;font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);-webkit-text-size-adjust:100%}button,input,textarea{font:inherit}button,a,input,textarea{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:default;opacity:.35}a{color:inherit}h1,h2,p{margin:0}[hidden]{display:none!important}svg{width:19px;height:19px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linejoin:round;stroke-linecap:round}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #8aac76;outline-offset:4px}.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.button{min-height:48px;border-radius:12px;border:1px solid transparent;padding:11px 23px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:.9rem;font-weight:550;transition:background .15s}.button-primary{background:var(--green);color:white}.button-primary:hover{background:#2d5c4e}.button-outline{background:transparent;border-color:#d0dad0;color:var(--ink)}.button-outline:hover{background:#eaf0e6}.text-button{border:0;background:none;color:var(--green);padding:10px 0;text-decoration:underline;text-underline-offset:4px;font-size:.85rem}.danger{color:#a34330}.icon-button{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:none;color:var(--ink);font-size:1.5rem;flex-shrink:0}.eyebrow{font-size:.74rem;font-weight:550;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.app-header{max-width:1150px;margin:auto;min-height:105px;display:flex;align-items:center;justify-content:space-between;padding:18px 40px}.brand{display:flex;gap:14px;align-items:center;text-decoration:none;font-size:1.6rem;font-weight:650;letter-spacing:-.065em}.brand-mark{width:40px;height:38px;position:relative;display:block}.brand-mark i{position:absolute;border:2px solid var(--green);border-radius:14px;width:24px;height:33px;transform:rotate(-30deg);left:1px;top:2px}.brand-mark i+i{transform:rotate(30deg);left:14px;border-color:#7b977a}.app-header .button{min-height:42px;padding:8px 15px;font-size:.82rem}main{max-width:790px;margin:0 auto;padding:0 30px 40px}.intro{text-align:center;padding:55px 0 80px}.intro-art{width:150px;height:128px;margin:0 auto 30px;position:relative}.intro-art span{position:absolute;left:23px;top:12px;width:64px;height:104px;border:1.5px solid #75977c;border-radius:40px;transform:rotate(-29deg);background:#e2eadc80}.intro-art span+span{left:67px;transform:rotate(29deg);border-color:#b4c69c;background:#e6eddd60}.intro h1{font-family:Georgia,"Times New Roman",serif;font-size:3.5rem;letter-spacing:-.045em;font-weight:400;line-height:1.15;margin-top:19px}.intro-description{font-size:.9rem;line-height:1.9;color:var(--muted);margin-top:24px}.intro .button{margin-top:33px;min-width:225px;min-height:53px}.wizard{padding-top:32px;outline:0}.wizard-meta{display:flex;align-items:baseline;justify-content:space-between;gap:18px;color:var(--muted);font-size:.77rem;padding:0 3px 14px}.wizard-meta>span:last-child{white-space:nowrap;font-variant-numeric:tabular-nums}.wizard-progress{height:3px;border-radius:3px;background:#dfe6db;overflow:hidden;margin-bottom:28px}.wizard-progress>span{display:block;height:100%;background:#78986b;border-radius:3px;}.question-card{background:white;border:1px solid var(--line);border-radius:24px;padding:37px 38px 31px;min-height:325px}.question-text{font-size:1.45rem;font-weight:450;letter-spacing:-.022em;line-height:1.55;white-space:normal}.instructions{font-size:.82rem;color:var(--muted);margin-top:20px;line-height:1.7}.instructions summary{cursor:pointer;width:max-content}.instructions p{margin-top:10px}.answer-fields{margin-top:28px}.field+.field{margin-top:30px}.field-label{display:block;font-size:.85rem;font-weight:500;margin-bottom:12px}.optional{font-weight:400;color:var(--muted);font-size:.72rem}.range-heading{text-align:center;margin-bottom:19px}.range-output{font-size:2rem;font-weight:450;letter-spacing:-.03em;font-variant-numeric:tabular-nums}.range-output span{font-size:.85rem;color:var(--muted);letter-spacing:0}.range-wrap{padding:0 1px}.rating-range{display:block;-webkit-appearance:none;appearance:none;touch-action:pan-y;width:100%;height:38px;background:transparent;margin:0;padding:0;cursor:pointer;outline-offset:5px}.rating-range::-webkit-slider-runnable-track{height:9px;border-radius:10px;background:linear-gradient(90deg,#4c9a63 0%,#92b66a 26%,#ddc961 50%,#db9960 73%,#c75b55 100%)}.rating-range::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:30px;height:30px;margin-top:-10.5px;background:white;border:3px solid #365d47;border-radius:50%;box-shadow:0 2px 6px #263b3322}.rating-range::-moz-range-track{height:9px;border-radius:10px;background:linear-gradient(90deg,#4c9a63,#ddc961,#c75b55)}.rating-range::-moz-range-thumb{width:24px;height:24px;background:white;border:3px solid #365d47;border-radius:50%;box-shadow:0 2px 6px #263b3322}.untouched .rating-range::-webkit-slider-thumb{border-color:#a0aca0}.untouched .rating-range::-moz-range-thumb{border-color:#a0aca0}.range-ticks{display:flex;justify-content:space-between;margin:7px 11px 0;font-size:.79rem;color:#6c786d;font-variant-numeric:tabular-nums}.range-ticks span{width:10px;text-align:center}.clear-answer{display:block;margin:16px 0 0 auto;padding:4px 0;border:0;background:none;color:#7b867d;font-size:.72rem;text-decoration:underline;text-underline-offset:3px;min-height:30px}.choice-options{display:flex;flex-wrap:wrap;gap:9px}.choice-options button{border:1px solid #d8e1d6;min-height:47px;border-radius:10px;padding:11px 17px;background:#f8faf6;color:var(--ink);font-size:.9rem;text-align:left}.choice-options button.selected{background:var(--green);border-color:var(--green);color:white}.choice-options.multi button.selected{background:#e7efdf;border-color:#618657;color:var(--green)}textarea,.number-input{width:100%;border:1px solid #d9e2d6;border-radius:12px;padding:14px 15px;background:#fafcf9;color:var(--ink);font-size:1rem;line-height:1.7;resize:vertical}textarea{min-height:170px}textarea::placeholder{color:#95a08f}.number-input{max-width:180px;min-height:50px}.number-input:invalid{border-color:#b35747}.wizard-navigation{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:25px 0 0}.wizard-navigation>.button{min-width:120px}.save-state{font-size:.69rem;color:#8a948a;text-align:center}.save-state.failed{color:#a34330}.completion{text-align:center;padding:100px 0}.completion-mark{width:65px;height:65px;border-radius:50%;display:grid;place-items:center;margin:0 auto 28px;background:#e1ead8;color:var(--green);font-size:2rem}.completion h1{font-family:Georgia,"Times New Roman",serif;font-size:2.4rem;font-weight:400;letter-spacing:-.04em}.completion p{color:var(--muted);font-size:.9rem;margin-top:15px}.completion-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}.notice{max-width:730px;padding:12px 17px;margin:5px auto 15px;background:#fff1ce;border-radius:12px;color:#75561e;font-size:.83rem}
+.ranking-help{display:none}.ranking-list{display:grid;gap:7px}.ranking-item{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:#fafbf8;border-radius:10px;padding:11px}.rank-position{width:20px;text-align:center;color:var(--muted);font-size:.76rem;flex-shrink:0}.ranking-label{flex:1;font-size:.82rem;line-height:1.5}.ranking-controls{display:flex;gap:4px}.ranking-controls button{width:35px;height:38px;border-radius:7px;border:1px solid var(--line);background:white;color:var(--ink);font-size:1rem;padding:0}.ranking-item.excluded{background:#f3f4f0;opacity:.6}.ranking-item.excluded .ranking-label{text-decoration:line-through}.ranking-start{margin-top:16px;font-size:.8rem}
+dialog{border:1px solid var(--line);border-radius:23px;padding:27px;max-width:500px;width:calc(100% - 30px);color:var(--ink);background:white;max-height:calc(100dvh - 35px);overflow-y:auto;box-shadow:0 20px 100px #12332222}dialog::backdrop{background:#152c2570;backdrop-filter:blur(3px)}.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:17px}.dialog-head h2{font-size:1.55rem;font-weight:500;letter-spacing:-.035em;line-height:1.3}dialog>p{font-size:.86rem;color:var(--muted);line-height:1.7}.file-summary{margin-bottom:18px}.file-actions{display:grid;gap:8px}.file-action{display:flex;align-items:center;gap:13px;background:white;border:1px solid var(--line);border-radius:12px;padding:14px;width:100%;text-align:left;color:var(--ink)}.file-action:hover{background:#f7faf3}.file-icon{font-size:.6rem;font-weight:650;letter-spacing:.03em;background:#f0f5e9;border:1px solid #d5e0cb;color:var(--green);width:42px;height:42px;display:grid;place-items:center;border-radius:8px;flex-shrink:0}.file-action strong{display:block;font-weight:500;font-size:.86rem}.file-action small{display:block;font-size:.71rem;color:var(--muted);margin-top:3px;line-height:1.6}.small-note{font-size:.73rem!important;color:var(--muted);line-height:1.75;margin-top:18px!important}.dialog-bottom{display:flex;gap:13px;align-items:center;justify-content:space-between;margin-top:25px}.download-actions{display:flex;gap:10px;flex-wrap:wrap}.toast{position:fixed;bottom:calc(25px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:100;background:#203d32;color:white;border:1px solid #4c6f57;border-radius:12px;padding:13px 19px;max-width:calc(100% - 30px);width:max-content;font-size:.83rem;pointer-events:none;box-shadow:0 5px 25px #0002}
+@media(max-width:600px){.app-header{padding:16px 22px;min-height:88px}.brand{font-size:1.4rem;gap:10px}.brand-mark{transform:scale(.85);transform-origin:left center;width:35px}.app-header .button{font-size:.77rem;padding:8px 12px;min-height:41px}main{padding:0 20px calc(25px + env(safe-area-inset-bottom))}.intro{padding:45px 0}.intro-art{transform:scale(.9);margin-bottom:20px}.intro h1{font-size:2.55rem;margin-top:18px}.intro-description{font-size:.82rem;line-height:1.85;margin-top:22px}.intro .button{min-width:205px;margin-top:31px}.eyebrow{font-size:.65rem}.wizard{padding-top:24px}.wizard-meta{font-size:.71rem;gap:14px;padding-bottom:13px}.wizard-progress{margin-bottom:23px}.question-card{border-radius:21px;padding:26px 23px 25px;min-height:300px}.question-text{font-size:1.25rem;line-height:1.6;letter-spacing:-.022em}.answer-fields{margin-top:25px}.range-heading{margin-bottom:21px}.range-output{font-size:1.95rem}.range-ticks{font-size:.75rem;margin-top:8px}.wizard-navigation{gap:12px;padding-top:23px}.wizard-navigation>.button{min-width:97px;min-height:48px;padding:10px 20px;font-size:.86rem}.save-state{max-width:95px;font-size:.63rem;line-height:1.55}.field+.field{margin-top:25px}.field-label{font-size:.82rem}.choice-options button{font-size:.84rem;padding:10px 14px}.ranking-item{gap:6px;padding:9px 7px}.ranking-label{font-size:.74rem}.rank-position{width:17px;font-size:.7rem}.ranking-controls{gap:3px}.ranking-controls button{width:29px;height:36px}.ranking-start{font-size:.74rem;padding:10px 15px}.instructions{font-size:.77rem}.completion{padding:65px 0}.completion h1{font-size:2rem}dialog{padding:23px 20px;border-radius:20px}.dialog-head h2{font-size:1.45rem}.file-action{padding:13px 11px;gap:11px}.file-action strong{font-size:.82rem}.file-action small{font-size:.68rem}.notice{margin:0 20px 15px;font-size:.76rem}}
+@media(max-width:370px){main{padding-left:14px;padding-right:14px}.app-header{padding-left:17px;padding-right:17px}.question-card{padding:23px 19px}.question-text{font-size:1.17rem}.intro h1{font-size:2.3rem}.wizard-navigation>.button{min-width:90px;padding:10px 16px}.range-ticks{font-size:.7rem}.ranking-controls button{width:26px}.save-state{font-size:.58rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{body{background:white}.app-header,.wizard-navigation,.clear-answer{display:none}.question-card{border:0;padding:0;break-inside:avoid}dialog{display:none!important}}
+
+.question-description{margin-top:16px;font-size:.91rem;line-height:1.7;color:#56665a}.question-description p+p{margin-top:10px}
+
+
+.header-controls{display:flex;align-items:center;gap:10px}.theme-toggle{display:grid;place-items:center;width:42px;height:42px;background:transparent}.theme-toggle svg{width:20px;height:20px}.card-switchers{display:flex;gap:10px;margin:-5px 0 28px}.picker-button{border:1px solid var(--line);background:#fafcf8;border-radius:10px;min-height:42px;display:flex;align-items:center;justify-content:space-between;padding:9px 13px;gap:12px;color:#5a705d;font-size:.76rem;flex:1;min-width:0}.picker-button>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.picker-button>i{display:block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin:0 2px 4px 0;flex-shrink:0}.jump-options{max-height:58dvh;overflow-y:auto;overscroll-behavior:contain;padding:3px}.topic-options{display:grid;gap:7px}.jump-topic{display:grid;grid-template-columns:minmax(0,1fr) 40px;gap:8px 12px;padding:14px;border:1px solid var(--line);border-radius:12px;background:#fafcf8;color:var(--ink);text-align:left;min-height:66px}.jump-topic.current,.jump-question.current{border-color:#6c8f61;background:#edf3e6}.jump-topic-name{font-size:.84rem;line-height:1.4}.jump-percent{font-size:.79rem;color:var(--muted);text-align:right}.jump-meter{grid-column:1 / -1;background:#dfe7d8;border-radius:3px;height:3px;overflow:hidden}.jump-meter>i{display:block;background:#7c9b69;height:100%;border-radius:3px}.question-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.jump-question{display:flex;align-items:center;justify-content:center;gap:8px;min-height:58px;padding:9px 6px;border:1px solid var(--line);border-radius:11px;background:#fafcf8;color:var(--ink);font-size:.76rem;white-space:nowrap}.jump-mark{color:#9aab91;font-size:1rem}.jump-mark.complete{color:#4f7e3f}.jump-mark.partial{color:#ad823a}.other-banner{max-width:730px;margin:0 auto 12px;padding:10px 16px;border:1px solid #cfdbbd;border-radius:12px;background:#eef3e3;color:#4c6a3d;font-size:.79rem;display:flex;align-items:center;justify-content:space-between;gap:15px}.other-banner .text-button{font-size:.76rem;padding:3px 0}.viewing-other .answer-fields button:disabled,.viewing-other .rating-range:disabled{opacity:1}.viewing-other textarea{resize:none}.file-action:disabled{opacity:.4}.person-icon svg{width:23px;height:23px}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#151f1b;--ink:#e2ecdf;--muted:#a5b4a6;--line:#36463a;--green:#b7d1a2}
+[data-theme="dark"] .button-primary{background:#bed5a6;color:#1c3022}[data-theme="dark"] .button-primary:hover{background:#d0e1bd}[data-theme="dark"] .button-outline:hover{background:#293b2d}[data-theme="dark"] .brand-mark i+i{border-color:#7e9977}[data-theme="dark"] .intro-art span{border-color:#72936f;background:#3b503950}[data-theme="dark"] .intro-art span+span{border-color:#8ca176;background:#4a5d3c50}[data-theme="dark"] .wizard-progress{background:#344332}[data-theme="dark"] .wizard-progress>span{background:#a8c388}[data-theme="dark"] .question-card,[data-theme="dark"] dialog{background:#1e2b23}[data-theme="dark"] .question-description{color:#b5c3b3}[data-theme="dark"] .picker-button,[data-theme="dark"] .jump-topic,[data-theme="dark"] .jump-question{background:#24352a;color:#c4d4b8}[data-theme="dark"] .jump-topic.current,[data-theme="dark"] .jump-question.current{background:#354b30;border-color:#a0b985}[data-theme="dark"] .jump-meter{background:#41543c}[data-theme="dark"] .jump-meter>i{background:#b0c998}[data-theme="dark"] .jump-mark.complete{color:#bed4a6}[data-theme="dark"] .jump-mark.partial{color:#e3bf7d}[data-theme="dark"] .range-output span,[data-theme="dark"] .range-ticks{color:#a9b9a4}[data-theme="dark"] .rating-range::-webkit-slider-thumb{background:#e5ecdf;border-color:#b3c4a5}[data-theme="dark"] .rating-range::-moz-range-thumb{background:#e5ecdf;border-color:#b3c4a5}[data-theme="dark"] .untouched .rating-range::-webkit-slider-thumb{background:#26372a;border-color:#8c9c82}[data-theme="dark"] .untouched .rating-range::-moz-range-thumb{background:#26372a;border-color:#8c9c82}[data-theme="dark"] .choice-options button{background:#27372b;border-color:#41513e;color:#dce8d5}[data-theme="dark"] .choice-options button.selected,[data-theme="dark"] .choice-options.multi button.selected{background:#bed4a6;color:#1d3021;border-color:#bed4a6}[data-theme="dark"] textarea,[data-theme="dark"] .number-input{background:#19261e;border-color:#3d503c;color:#dce7d5}[data-theme="dark"] .save-state,[data-theme="dark"] .clear-answer{color:#99ad92}[data-theme="dark"] .ranking-item{background:#243329}[data-theme="dark"] .ranking-controls button{background:#304332;color:#dce7d5}[data-theme="dark"] .ranking-item.excluded{background:#1b271e}[data-theme="dark"] .file-action{background:#233228}[data-theme="dark"] .file-action:hover{background:#30422f}[data-theme="dark"] .file-icon{background:#34462d;border-color:#4b6040;color:#d0e0bc}[data-theme="dark"] .completion-mark{background:#344b2d;color:#d0e0b8}[data-theme="dark"] .other-banner{background:#293c26;border-color:#4f6740;color:#ccdeb8}[data-theme="dark"] .danger{color:#e6a591}[data-theme="dark"] .notice{background:#443c24;color:#e5d19a}
+@media(max-width:600px){.header-controls{gap:8px}.card-switchers{margin-bottom:24px;gap:8px}.picker-button{padding:9px 11px;font-size:.71rem;min-height:42px;gap:7px}.question-card{padding-top:24px}.jump-dialog{margin:auto auto calc(15px + env(safe-area-inset-bottom));border-radius:22px;max-width:500px}.jump-options{max-height:61dvh}.jump-topic{padding:12px}.jump-topic-name{font-size:.8rem}.other-banner{margin:0 20px 16px;padding:9px 12px;font-size:.72rem;gap:10px}.other-banner .text-button{font-size:.7rem}.question-options{gap:7px}.jump-question{font-size:.73rem;gap:6px}}
+
+.review-actions{display:flex;gap:15px;align-items:center;flex-wrap:wrap}.review-actions #restore-own{color:var(--muted);font-size:.69rem}.other-banner{flex-wrap:wrap}.file-actions .file-action{min-height:68px}
+
+.comment-toggle{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:10px;background:transparent}.comment-toggle svg{width:19px;height:19px}.comment-toggle[aria-expanded="true"]{background:#eaf1e2;border-color:#9eb38b}.comment-field textarea{min-height:115px}.comment-field .field-label{color:var(--muted);font-size:.77rem}.comment-field.field{margin-top:25px}[data-theme="dark"] .comment-toggle[aria-expanded="true"]{background:#34492d;border-color:#8fa77b}
+
+.range-endpoints{display:flex;justify-content:space-between;gap:20px;margin:12px 0 0;font-size:.71rem;color:var(--muted)}.range-endpoints span:last-child{text-align:right}
+
+.app-header{position:sticky;top:0;z-index:20;background:var(--bg)}
+
+.wizard{overflow-x:clip}.comment-field.field{margin:0 0 24px}.comment-field textarea{scroll-margin-top:120px}.question-card{transform-origin:50% 45%}
+
+html,body{overscroll-behavior-x:contain}.question-card{touch-action:pan-y pinch-zoom;transform-origin:50% 80%}.question-card.dragging{user-select:none;-webkit-user-select:none;will-change:transform,opacity}
+
+.jump-overall{display:grid;grid-template-columns:1fr auto;gap:6px 15px;padding:0 3px 20px;margin-bottom:8px;color:var(--muted);font-size:.78rem}.jump-overall strong{font-weight:550;color:var(--ink)}.jump-overall .overall-count{font-size:.69rem;grid-column:1/-1}.jump-overall .jump-meter{height:4px}.nojs-card{max-width:500px;margin:60px auto;padding:30px;text-align:center}.nojs-card p{margin:20px 0;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<header class="app-header"><a href="#" class="brand" id="home" aria-label="О важном, к началу"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>о важном</span></a><div class="header-controls"><button id="theme-toggle" class="icon-button theme-toggle" aria-label="Включить тёмную тему" aria-pressed="false"></button><button id="files-button" class="button button-outline"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7V5h6l2 2h8v12H4z"/></svg><span>Ответы</span></button></div></header>
+<div id="storage-warning" class="notice" hidden>Сохранение в браузере недоступно. Сохрани ответы файлом перед закрытием.</div>
+<div id="file-note" class="notice" hidden>На iPhone можно <a href="https://deiteriys-dotcom.github.io/o-vazhnom/">открыть анкету в Safari</a>.</div>
+<div id="other-banner" class="other-banner" hidden><span>Ответы другого человека</span><div class="review-actions"><button id="restore-own" class="text-button">Это моя копия</button><button id="return-own" class="text-button">Вернуться к своим</button></div></div>
+<main>
+<section class="intro" id="intro" aria-labelledby="page-title"><div class="intro-art" aria-hidden="true"><span></span><span></span></div><p class="eyebrow">Личная анкета</p><h1 id="page-title">О родительстве<br>и вашем будущем</h1><p class="intro-description">83 вопроса. Можно заполнить за несколько раз.<br>Ответы сохраняются на устройстве.</p><button id="continue-button" class="button button-primary">Начать заполнение</button></section>
+<section id="question-section" class="wizard" aria-label="Вопрос анкеты" tabindex="-1" hidden><div class="wizard-meta"><span id="section-title"></span><span id="question-counter"></span></div><div class="wizard-progress" role="progressbar" aria-label="Положение в анкете" aria-valuemin="1" aria-valuemax="83" id="wizard-progress"><span id="wizard-progress-fill"></span></div><div id="question-list"></div><div class="wizard-navigation"><button id="previous-button" class="button button-outline">Назад</button><span id="save-state" class="save-state" role="status" aria-live="polite">Сохранение на устройстве</span><button id="next-button" class="button button-primary">Дальше</button></div></section>
+<section id="completion-screen" class="completion" hidden><span class="completion-mark" aria-hidden="true">✓</span><h1 id="completion-title">Ответы сохранены</h1><p id="completion-count"></p><div class="completion-actions"><button id="completion-export" class="button button-primary">Сохранить в файл</button><button id="completion-resume" class="button button-outline">Вернуться к вопросам</button></div></section>
+</main>
+<dialog id="files-dialog" aria-labelledby="files-title"><div class="dialog-head"><h2 id="files-title">Ответы</h2><button class="icon-button close-dialog" aria-label="Закрыть">×</button></div><p id="file-summary" class="file-summary"></p><div class="file-actions"><button id="export-json" class="file-action"><span class="file-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-4 4 4-4 4 4M5 12v8h14v-8"/></svg></span><strong>Поделиться ответами</strong></button><button id="import-other" class="file-action"><span class="file-icon person-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg></span><strong>Посмотреть ответы другого человека</strong></button><button id="export-html" class="file-action"><span class="file-icon">HTML</span><strong>Сохранить HTML</strong></button></div></dialog>
+<dialog id="jump-dialog" class="jump-dialog" aria-labelledby="jump-title"><div class="dialog-head"><h2 id="jump-title"></h2><button class="icon-button close-dialog" aria-label="Закрыть">×</button></div><div id="jump-overall" class="jump-overall"></div><div id="jump-options" class="jump-options"></div></dialog>
+<dialog id="confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-head"><h2 id="confirm-title"></h2><button class="icon-button" id="cancel-cross" aria-label="Закрыть">×</button></div><p id="confirm-message"></p><div class="dialog-bottom"><button id="confirm-cancel" class="button button-outline">Отмена</button><button id="confirm-ok" class="button button-primary">Продолжить</button></div></dialog>
+<dialog id="download-dialog" aria-labelledby="download-title"><div class="dialog-head"><h2 id="download-title">Файл готов</h2><button class="icon-button close-dialog" aria-label="Закрыть">×</button></div><div class="download-actions"><a id="download-link" class="button button-primary">Скачать файл</a><button id="share-file" class="button button-outline">Поделиться</button></div><p class="small-note" id="download-name"></p></dialog>
+<input id="import-file" type="file" accept="application/json,.json" hidden>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<noscript><style>main,.header-controls{display:none!important}</style><section class="nojs-card"><h2>Открыть анкету</h2><p>В этом просмотрщике заполнение недоступно. На iPhone открой анкету в Safari.</p><a class="button button-primary" href="https://deiteriys-dotcom.github.io/o-vazhnom/">Открыть в Safari</a></section></noscript>
+<script id="questionnaire-data" type="application/json">{"id": "o-vazhnom-83-v1", "version": 1, "sections": [{"title": "Продолжение рода", "questions": [{"id": "q1", "number": 1, "extra": false, "text": "Оцени, насколько именно для тебя важно продолжить род (иметь генетически родного ребенка)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неважно, 10 - очень важно."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q2", "number": 2, "extra": false, "text": "Оцени, как ты считаешь, насколько для твоего партнера важно продолжить род (иметь генетически родного ребенка)??", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неважно, 10 - очень важно."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q3", "number": 3, "extra": false, "text": "Оцени, насколько для счастья вашей пары важно продолжить род (иметь генетически родного ребенка)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неважно, 10 - очень важно."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q4", "number": 4, "extra": false, "text": "Оцени, как считаешь, насколько важно в целом для вашей семьи (включая близких родственников) важно продолжить род (передать гены)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неважно, 10 - очень важно."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}]}, {"title": "Опыт родителя", "questions": [{"id": "q5", "number": 5, "extra": false, "text": "Оцени, насколько именно для тебя важно получить опыт родителя (родного или усыновленного ребенка)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неважно, 10 - очень важно."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q6", "number": 6, "extra": false, "text": "Оцени, как ты считаешь, насколько для твоего партнера важно получить опыт родителя (родного или усыновленного ребенка)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неважно, 10 - очень важно."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q7", "number": 7, "extra": false, "text": "Оцени, насколько для счастья вашей пары важно получить опыт родителя (родного или усыновленного ребенка)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неважно, 10 - очень важно."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q8", "number": 8, "extra": false, "text": "Оцени, как считаешь, насколько важно в целом для вашей семьи (включая близких родственников пары) получить опыт родителя или опыт бабушки/дедушки (родного или усыновленного ребенка)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неважно, 10 - очень важно."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}]}, {"title": "Отношение друг к другу", "questions": [{"id": "q9", "number": 9, "extra": false, "text": "Оцени, насколько тебе важно иметь генетически родного ребенка именно от твоего партнера?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неважно, 10 - очень важно."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q10", "number": 10, "extra": false, "text": "Оцени, как ты считаешь, насколько для твоего партнера важно иметь генетически родного ребенка именно от тебя?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неважно, 10 - очень важно."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q11", "number": 11, "extra": false, "text": "Оцени, насколько для счастья вашей пары важно иметь генетически родного ребенка друг от друга?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неважно, 10 - очень важно."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}]}, {"title": "Риск развода для пары", "questions": [{"id": "q12", "number": 12, "extra": false, "text": "Ты мог бы расстаться с твоим партнером, если бы на 100% знал бы, что причина бесплодия в нём?", "instructions": ["Ответь МОГ БЫ или НЕ МОГ БЫ. И поясни ответ."], "fields": [{"key": "choice", "label": "Выбери ответ", "type": "choice", "options": ["Мог бы", "Не мог бы"]}, {"key": "explanation", "label": "Поясни ответ", "type": "text"}]}, {"id": "q13", "number": 13, "extra": false, "text": "Как ты думаешь твой партнёр мог бы расстаться с тобой, если бы на 100% знал бы, что причина бесплодия в тебе?", "instructions": ["Ответь МОГ БЫ или НЕ МОГ БЫ. И поясни ответ."], "fields": [{"key": "choice", "label": "Выбери ответ", "type": "choice", "options": ["Мог бы", "Не мог бы"]}, {"key": "explanation", "label": "Поясни ответ", "type": "text"}]}, {"id": "q14", "number": 14, "extra": false, "text": "Как ты думаешь, твои близкие родственники могли бы настаивать на разводе вашей пары, если бы на 100% знали бы, что причина бесплодия в твоем партнёре?", "instructions": ["Ответь МОГЛИ БЫ или НЕ МОГЛИ БЫ.", "Поставь оценку от 1 до 10 насколько для тебя важно их мнение.", "Поставь оценку от 1 до 10 насколько, как ты считаешь, насколько твоему партнёру важно их мнение."], "fields": [{"key": "choice", "label": "Выбери ответ", "type": "choice", "options": ["Могли бы", "Не могли бы"]}, {"key": "self", "label": "Насколько тебе важно их мнение", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "partner", "label": "Насколько партнёру важно их мнение, по твоей оценке", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q15", "number": 15, "extra": false, "text": "Как ты думаешь, близкие родственники твоего партнёра могли бы настаивать на разводе вашей пары, если бы на 100% знали бы, что причина бесплодия в тебе?", "instructions": ["Ответь МОГЛИ БЫ или НЕ МОГЛИ БЫ.", "Поставь оценку от 1 до 10 насколько для тебя важно их мнение.", "Поставь оценку от 1 до 10 насколько, как ты считаешь, насколько твоему партнёру важно их мнение."], "fields": [{"key": "choice", "label": "Выбери ответ", "type": "choice", "options": ["Могли бы", "Не могли бы"]}, {"key": "self", "label": "Насколько тебе важно их мнение", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "partner", "label": "Насколько партнёру важно их мнение, по твоей оценке", "type": "scale", "low": "Совсем неважно", "high": "Очень важно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}]}, {"title": "Приемлимость разных вариантов", "questions": [{"id": "q16", "number": 16, "extra": false, "text": "Оцени, насколько для тебя приемлемо, если в вашей паре родится ребенок генетически родной только твоему партнёру, но усыновленный для тебя (генетически не родной)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q17", "number": 17, "extra": false, "text": "Оцени, как ты считаешь, насколько приемлемо для твоего партнёра, если в вашей паре родится ребенок генетически родной только твоему партнёру, но усыновленный для тебя (генетически не родной)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q18", "number": 18, "extra": false, "text": "Оцени, насколько для тебя приемлемо, если в вашей паре родится ребенок генетически родной только тебе, но усыновленный для твоего партнера (генетически не родной)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q19", "number": 19, "extra": false, "text": "Оцени, как ты считаешь, насколько для твоего партнера приемлемо, если в вашей паре родится ребенок генетически родной только тебе, но усыновленный для твоего партнера (генетически не родной)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q20", "number": 20, "extra": false, "text": "Оцени, насколько для тебя приемлемо, если в вашей паре родится два ребенка: один ребенок будет генетически родным тебе, но не партнеру, а второй ребенок, наоборот, родной партнёру, но не тебе.?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q21", "number": 21, "extra": false, "text": "Оцени, как ты считаешь, насколько для твоего партнера приемлемо, если в вашей паре родится два ребенка: один ребенок будет генетически родным тебе, но не партнеру, а второй ребенок, наоборот, родной партнёру, но не тебе.?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q22", "number": 22, "extra": false, "text": "Оцени, насколько для тебя приемлемо, если в вашей паре родится ребенок генетически не родной вам обоим, но выносит и родит его жена?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q23", "number": 23, "extra": false, "text": "Оцени, как ты считаешь, насколько для твоего партнера приемлемо, если в вашей паре родится ребенок генетически не родной вам обоим, но выносит и родит его жена?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q24", "number": 24, "extra": false, "text": "Оцени, насколько для тебя приемлемо, если в вашей паре родится ребенок генетически не родной вам обоим и выносит его суррогатная матерь?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q25", "number": 25, "extra": false, "text": "Оцени, как ты считаешь, насколько для твоего партнера приемлемо, если в вашей паре родится ребенок генетически не родной вам обоим и выносит его суррогатная матерь?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q26", "number": 26, "extra": false, "text": "Оцени, насколько для тебя приемлемо, если ваша пара усыновит ребенка из детского дома в младенческом возрасте?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q27", "number": 27, "extra": false, "text": "Оцени, как ты считаешь, насколько для твоего партнера приемлемо, если ваша пара усыновит ребенка из детского дома в младенческом возрасте?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q28", "number": 28, "extra": false, "text": "Оцени, насколько для тебя приемлемо, если ваша пара усыновит ребенка из детского дома в возрасте до 3 лет?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q29", "number": 29, "extra": false, "text": "Оцени, как ты считаешь, насколько для твоего партнера приемлемо, если ваша пара усыновит ребенка из детского дома в возрасте до 3 лет?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q30", "number": 30, "extra": false, "text": "Оцени, насколько для тебя приемлемо, если ваша пара усыновит ребенка из детского дома в возрасте от 3 до 7 лет?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q31", "number": 31, "extra": false, "text": "Оцени, как ты считаешь, насколько для твоего партнера приемлемо, если ваша пара усыновит ребенка из детского дома в возрасте от 3 до 7 лет?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q32", "number": 32, "extra": false, "text": "Оцени, насколько для тебя приемлемо, если ваша пара усыновит ребенка из детского дома в возрасте от 7 лет и старше?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q33", "number": 33, "extra": false, "text": "Оцени, как ты считаешь, насколько для твоего партнера приемлемо, если ваша пара усыновит ребенка из детского дома в возрасте от 7 лет и старше?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}]}, {"title": "Здоровье ребенка", "questions": [{"id": "q34", "number": 34, "extra": false, "text": "Если во время обязательного скрининга на генетические аномалии во время беременности, результат НИПТ дает гарантированно плохой результат (100% вероятность рождения ребенка с серьезным заболеванием), к какому выбору ты скорее склоняешься?", "instructions": ["И, как думаешь, какой из вариантов скорее всего выбрал бы твой партнер?", "Вариант 1. Аборт", "Вариант 2. Сохранить беременность"], "fields": [{"key": "self", "label": "Твой выбор", "type": "choice", "options": ["Аборт", "Сохранить беременность"]}, {"key": "partner", "label": "Предполагаемый выбор партнёра", "type": "choice", "options": ["Аборт", "Сохранить беременность"]}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q35", "number": 35, "extra": false, "text": "Если во время обязательного скрининга на генетические аномалии во время беременности, результат НИПТ будет неоднозначным (50% вероятность рождения ребенка с серьезным заболеванием), к какому выбору ты скорее склоняешься?", "instructions": ["И, как думаешь, какой из вариантов скорее всего выбрал бы твой партнер?", "Вариант 1. Аборт", "Вариант 2. Сохранить беременность"], "fields": [{"key": "self", "label": "Твой выбор", "type": "choice", "options": ["Аборт", "Сохранить беременность"]}, {"key": "partner", "label": "Предполагаемый выбор партнёра", "type": "choice", "options": ["Аборт", "Сохранить беременность"]}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q36", "number": 36, "extra": false, "text": "Ты сможешь принять рождение генетически родного ребенка, который серьезно болен или имеет серьезные генетические отклонения (например, синдром Дауна) и продолжить его воспитывать?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем не смогу, 10 – точно смогу принять."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не смогу", "high": "Точно смогу"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q37", "number": 37, "extra": false, "text": "Как ты считаешь, насколько твой партнёр сможет принять рождение генетически родного ребенка, который серьезно болен или имеет серьезные генетические отклонения (например, синдром Дауна) и продолжить его воспитывать?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем не смогу, 10 – точно смогу принять."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не смогу", "high": "Точно смогу"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q38", "number": 38, "extra": false, "text": "Ты сможешь продолжать воспитывать приемного ребенка, который уже после усыновления внезапно серьезно заболеет или же выясниться, что он имеет серьезные генетические отклонения?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем не смогу, 10 – точно смогу."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не смогу", "high": "Точно смогу"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q39", "number": 39, "extra": false, "text": "Оцени, как ты считаешь, насколько твой партнер сможет продолжать воспитывать приемного ребенка, который внезапно серьезно заболеет или уже после усыновления выясниться, что он имеет серьезные генетические отклонения?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем не смогу, 10 – точно смогу."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не смогу", "high": "Точно смогу"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q40", "number": 40, "extra": false, "text": "Какие группы здоровья (c I по V) усыновлённого ребенка для тебя приемлемы? Как считаешь, а для твоего партнера?", "instructions": ["I группа — полностью здоровые дети.", "II группа — хронических заболеваний нет, но могут иметь дефицит или избыток веса, часто болеть или есть небольшие последствия травм.", "III группа — хронические заболевания есть, но они в стадии клинической ремиссии.", "IV группа — хронические заболевания в активной стадии или в стадии нестойкой клинической ремиссии с частыми обострениями.", "V группа — тяжёлые хронические заболевания с редкими ремиссиями, а также дети-инвалиды."], "fields": [{"key": "self", "label": "Приемлемо для тебя", "type": "multi", "options": ["I группа", "II группа", "III группа", "IV группа", "V группа", "Ни одна группа"]}, {"key": "partner", "label": "Приемлемо для партнёра, по твоей оценке", "type": "multi", "options": ["I группа", "II группа", "III группа", "IV группа", "V группа", "Ни одна группа"]}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q41", "number": 41, "extra": false, "text": "Оцени, насколько для тебя приемлемо в ЭКО (как крайняя мера) осуществить перенос эмбриона, который по результатам предимплантационной диагностики был помечен как «не рекомендован к переносу», т.к. имеет высокий риск каких-то генетических заболеваний?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q42", "number": 42, "extra": false, "text": "Оцени, как считаешь, насколько для тебя твоего партнера приемлемо в ЭКО (как крайняя мера) осуществить перенос эмбриона, который по результатам предимплантационной диагностики был помечен как «не рекомендован к переносу», т.к. имеет высокий риск каких-то генетических заболеваний?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем неприемлемо, 10 - приемлемо."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем неприемлемо", "high": "Приемлемо"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}]}, {"title": "Стратегия, время и этапы", "questions": [{"id": "q43", "number": 43, "extra": false, "text": "Ниже перечислены разные варианты решения проблемы бесплодия. Сформируй стратегию: расставь цифры по возрастанию какой этап за каким должен идти (в случае, если предыдущий этап не работает)? Вычеркни те этапы, которые для тебя совсем неприемлемы.", "instructions": [], "fields": [{"key": "plan", "label": "Твой порядок этапов", "type": "ranking", "options": ["Попытки естественного зачатия", "Внутриматочная инсеминация", "Эко в естественном цикле (пункция будет, стимулцяии нет)", "Эко с собственными материалами (стимуляция)", "Эко с привлечением сурогатной матери (собственные мат-лы)", "Эко с донорской яициклеткой", "Эко с донорской спермой", "Эко с донорским эмбрионом", "Усыновление здорового младенца", "Усыновление здорового ребенка до 3 лет", "Усыновление здорового ребенка от 3 до 7 лет", "Усыновление здорового ребенка старше 7 лет", "Усыновление младенца (iii-v группа здоровья)", "Усыновление ребенка до 3 лет (iii-v группа здоровья)", "Усыновление ребенка от 3 до 7 лет (iii-v группа здоровья)", "Усыновление ребенка старше 7 лет (iii-v группа здоровья)", "Попечительство ребенка (возраст от 14 до 18 лет)", "Опека ребенка (возраст до 14 лет)", "Жизнь без детей"]}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q44", "number": 44, "extra": false, "text": "На данный момент, насколько ты готов продолжать пробовать эко с собственными материалами?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем не готов, 10 – полностью готов."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не готов", "high": "Полностью готов"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q45", "number": 45, "extra": false, "text": "На данный момент, сколько еще попыток ты готов продолжать пробовать эко с собственными материалами?", "instructions": ["Назови цифру."], "fields": [{"key": "attempts", "label": "Количество попыток", "type": "number", "max": 10000}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q46", "number": 46, "extra": false, "text": "Насколько ты готов прямо сейчас, чтобы уже в следующем протоколе эко применялись только донорские яйцеклетки? (жена будет проходить только второй этап эко, но ребенок будет ей не родным)", "instructions": ["Назови сколько таких попыток ты готов осуществить.", "Дай ответ цифрой от 1 до 10, где 1 - совсем не готов, 10 – полностью готов."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не готов", "high": "Полностью готов"}, {"key": "attempts", "label": "Количество попыток", "type": "number", "max": 10000}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q47", "number": 47, "extra": false, "text": "Насколько ты готов прямо сейчас, чтобы уже в следующем протоколе эко применялись только донорская сперма? (жена будет проходить весь цикл эко, в том числе стимуляцию суперовуляции, ребенок будет ей родной)", "instructions": ["Назови сколько таких попыток ты готов осуществить.", "Дай ответ цифрой от 1 до 10, где 1 - совсем не готов, 10 – полностью готов."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не готов", "high": "Полностью готов"}, {"key": "attempts", "label": "Количество попыток", "type": "number", "max": 10000}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q48", "number": 48, "extra": false, "text": "Насколько ты готов прямо сейчас, чтобы уже в следующем протоколе эко применялся донорский эмбрион (жена будет проходить только второй этап эко, но ребенок будет генетически не родной не мужу, не жене.)", "instructions": ["Назови сколько таких попыток ты готов осуществить.", "Дай ответ цифрой от 1 до 10, где 1 - совсем не готов, 10 – полностью готов."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не готов", "high": "Полностью готов"}, {"key": "attempts", "label": "Количество попыток", "type": "number", "max": 10000}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q49", "number": 49, "extra": false, "text": "Насколько ты готов прямо сейчас, чтобы уже в следующем протоколе эко подсадка эмбриона была бы суррогатной матери (при такой необходимости)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем не готов, 10 – полностью готов."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не готов", "high": "Полностью готов"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q50", "number": 50, "extra": false, "text": "Насколько ты готов прямо сейчас отказаться от дальнейших попыток эко вообще?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем не готов, 10 – полностью готов."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не готов", "high": "Полностью готов"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q51", "number": 51, "extra": false, "text": "Насколько ты готов прямо сейчас, чтобы отказаться от эко, но перейти к более щадящим методам забеременеть (с низким % вероятности на успех)?", "instructions": ["Например, продолжать попытки естественного зачатия без гарантий на результат. Или попробовать платную внутриматочную инсеминацию с отобранной спермой (как легкий, но малоэффективный способ ВРТ).", "Дай ответ цифрой от 1 до 10, где 1 - совсем не готов, 10 – полностью готов."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не готов", "high": "Полностью готов"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q52", "number": 52, "extra": false, "text": "Насколько прямо сейчас ты хотел бы всё бросить (не навсегда, но на время)? А потом вернуться к этому вопросу, однако потеряв бесценное время.", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем не хочу, 10 – очень хочу."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не хочу", "high": "Очень хочу"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q53", "number": 53, "extra": false, "text": "Насколько долго ты вообще готов пробовать дальше решать проблемы бесплодия разными путями?", "instructions": ["Назови сколько лет или попыток еще готов потрать на это. Или до какого возраста."], "fields": [{"key": "text", "label": "Сколько лет или попыток, либо до какого возраста", "type": "text"}]}, {"id": "q54", "number": 54, "extra": false, "text": "Насколько прямо сейчас ты готов уже прямо сейчас приступить к процедуре «усыновление ребенка»? Дай ответ цифрой от 1 до 10, где 1 - совсем не готов, 10 – готов.", "instructions": ["Если пока не готов, как думаешь, в какой момент ты будешь готов?", "И укажи ребенок какого возраста, пола и группы здоровья для тебя прием на данный момент."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не готов", "high": "Полностью готов"}, {"key": "when", "label": "Если пока не готов, когда будешь готов?", "type": "text", "optional": true}, {"key": "child", "label": "Приемлемые возраст, пол и группа здоровья ребёнка", "type": "text"}]}, {"id": "q55", "number": 55, "extra": false, "text": "Насколько тебе интересен опыт опеки или попечительства над ребенком (без усыновления)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем не интересно, 10 – очень интересно.", "Укажи ребенок какого возраста, пола и группы здоровья для тебя интересен на данный момент."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не интересно", "high": "Очень интересно"}, {"key": "child", "label": "Интересующие возраст, пол и группа здоровья ребёнка", "type": "text"}]}, {"id": "q56", "number": 56, "extra": false, "text": "Насколько ты готов прямо сейчас отказаться от всех попыток и принять решение продолжить жить вообще без детей?", "instructions": ["Как думаешь, насколько готов это сделать прямо сейчас твой партнер?", "Дай ответ цифрой от 1 до 10, где 1 - совсем не готов, 10 – полностью готов."], "fields": [{"key": "self", "label": "Твоя оценка", "type": "scale", "low": "Совсем не готов", "high": "Полностью готов"}, {"key": "partner", "label": "Оценка за партнёра", "type": "scale", "low": "Совсем не готов", "high": "Полностью готов"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q57", "number": 57, "extra": false, "text": "Сможешь ли ты жить счастливо без детей? А твой партнер, как думаешь, сможет?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 – точно нет, 10 – точно смогу."], "fields": [{"key": "self", "label": "Твоя оценка", "type": "scale", "low": "Точно нет", "high": "Точно смогу"}, {"key": "partner", "label": "Оценка за партнёра", "type": "scale", "low": "Точно нет", "high": "Точно смогу"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}]}, {"title": "Деньги", "questions": [{"id": "q58", "number": 58, "extra": false, "text": "Лечение бесплодия и попытки ЭКО требуют больших денежных трат.", "instructions": ["Как много денег ты можешь себе позволить потрать на новые попытки на данный момент (укажи твои реальные денежные запасы, которые готов вложить непосредственно ты – это необходимо для расчета стратегии).", "Не будешь ли когда-либо жалеть о потраченных деньгах?"], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "q59", "number": 59, "extra": false, "text": "В случае недостаточности денежных средств на дальнейшие попытки, готов ли ты искать другие способы, чтобы продолжить попытки?", "instructions": ["Например: взять кредит, попросить помощь у родственников, продать машину, отказаться от путешествий ради накоплений и т.п.", "Перечисли всё, что для тебя приемлемо и в каких пределах. Какая сумма в таком случае может набраться такими методами (нужно для расчета стратегии)."], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}]}, {"title": "Психологическое состояние", "questions": [{"id": "q60", "number": 60, "extra": false, "text": "Насколько сильную боль ты ощущаешь из-за бесплодия прямо сейчас (или за последние две недели)?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем не больно, 10 – очень больно."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не больно", "high": "Очень больно"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q61", "number": 61, "extra": false, "text": "Насколько ты способен сейчас чувствовать счастье (например, в других сферах жизни)? Когда ты в последний раз ощущал это чувство.", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 - совсем не способен, 10 – очень способен."], "fields": [{"key": "value", "label": "Твоя оценка", "type": "scale", "low": "Совсем не способен", "high": "Очень способен"}, {"key": "when", "label": "Когда ты в последний раз ощущал счастье?", "type": "text"}]}, {"id": "q62", "number": 62, "extra": false, "text": "Если прямо сейчас ты откажешься от всех попыток решить проблему бесплодия, ты почувствуешь облегчение или это скорее для тебя трагедия? А для твоего партнера, как думаешь?", "instructions": ["Дай ответ цифрой от 1 до 10, где 1 – трагедия, 10 – облегчение."], "fields": [{"key": "self", "label": "Твоя оценка", "type": "scale", "low": "Трагедия", "high": "Облегчение"}, {"key": "partner", "label": "Оценка за партнёра", "type": "scale", "low": "Трагедия", "high": "Облегчение"}, {"key": "comment", "label": "Комментарий", "type": "text", "optional": true, "comment": true}]}, {"id": "q63", "number": 63, "extra": false, "text": "Если бы прямо сейчас ты принял бы решение прекратить этот тяжелый путь. Что бы ты стал делать дальше прямо сейчас? И какие были бы планы на ближайшие месяцы и годы?", "instructions": ["Дай развернутый ответ."], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "q64", "number": 64, "extra": false, "text": "Как ты считаешь твое желание иметь ребенка и проходить все испытания на пути к этой мечте (вопреки всем сложностям) это твое собственное желание? Или желание кого-то другого (партнера, родственников, общества и т.п.)", "instructions": ["Дай развернутый ответ."], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "q65", "number": 65, "extra": false, "text": "О чем ты мечтаешь кроме появления у вашей пары ребенка? Перечисли все, что бы ты хотел сделать или получить в этой жизни (не связанное с ребенком).", "instructions": ["Дай развернутый ответ."], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "q66", "number": 66, "extra": false, "text": "Сожалеешь ли ты о принятых тобой решениях до, которые могли привести тебя к той точке, в которой ты находишься сейчас?", "instructions": ["Дай развернутый ответ."], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "q67", "number": 67, "extra": false, "text": "Как думаешь, будешь ли ты в будущем сожалеть о своих решениях на этом пути, которые ты принимаешь сейчас или уже принял в рамках проблемы бесплодия?", "instructions": ["Дай развернутый ответ."], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "q68", "number": 68, "extra": false, "text": "Ощущаешь ли ты сейчас или когда-либо чувство вины перед партнером, родственниками или обществом из-за проблемы бесплодия?", "instructions": ["Дай развернутый ответ."], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "q69", "number": 69, "extra": false, "text": "Возникала ли когда-либо или может быть прямо сейчас мысль о том, что во всех проблемах в связи с бесплодием виноват твой партнер?", "instructions": ["Дай развернутый ответ."], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "q70", "number": 70, "extra": false, "text": "Можешь ли ты сейчас представить жизнь вашей пары вообще без ребенка? Какой ты ее видишь?", "instructions": ["Дай развернутый ответ."], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "q71", "number": 71, "extra": false, "text": "Можешь ли ты сейчас представить жизнь вашей пары с ребенком (генетически не родным)? Какой ты ее видишь?", "instructions": ["Дай развернутый ответ."], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "q72", "number": 72, "extra": false, "text": "Можешь ли ты сейчас представить свою жизнь без твоего партнера (например, в случае развода) и без ребенка? Какой ты ее видишь?", "instructions": ["Дай развернутый ответ."], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "q73", "number": 73, "extra": false, "text": "Можешь ли ты сейчас представить свою жизнь без твоего партнера (например, в случае развода), но с ребенком (генетически родным или приемным)? Какой ты ее видишь?", "instructions": ["Дай развернутый ответ."], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}]}, {"title": "Дополнительные вопросы", "questions": [{"id": "d1", "number": 1, "extra": true, "text": "Если бы существовала волшебная кнопка, которая прямо сейчас даровала бы тебе всё, о чем ты мечтаешь о ребенке в счастливой любящей семье, но ребенок не был бы генетически твоим родным ребенком, но это никого вокруг не смущало, ты бы нажал эту кнопку прямо сейчас?", "instructions": [], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "d2", "number": 2, "extra": true, "text": "Опиши твой обычный будничный вечер через 3-5 лет после того, как у тебя появится ребенок. Что ты будешь делать, отчего придется отказаться, как изменится твоя жизнь?", "instructions": [], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "d3", "number": 3, "extra": true, "text": "Представь себе, что всё это страшный сон, и ты наконец-то просыпаешься в реальности! А реальность такова: у тебя уже есть здоровый родной ребенок, но от другого человека. В реальности твоего нынешнего партнера не существует, он лишь плод твоего сна. Твои ощущения.", "instructions": [], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "d4", "number": 4, "extra": true, "text": "Представь, ваш партнер сам инициирует разговор: «Я не могу дать тебе генетического ребенка, давай разведемся, чтобы ты могла найти кого-то фертильного». Ваша первая эмоция: облегчение, гнев, обида, паника или согласие? Только честно.", "instructions": [], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "d5", "number": 5, "extra": true, "text": "Представьте реакцию ваших знакомых, если вы расскажите им, что усыновили ребенка или использовали донора. Чего вы боитесь в их реакции больше всего: жалости, осуждения, неудобных вопросов или что-то еще?", "instructions": [], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "d6", "number": 6, "extra": true, "text": "Если бы ваша близкая подруга (или друг) столкнулась бы с высокой вероятностью рождения ребенка с тяжелым заболеванием, какой бы вы дали ей совет? Аборт или сохранить беременность?", "instructions": [], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "d7", "number": 7, "extra": true, "text": "Назовите конкретное событие или срок/дату (например, «возраст 40 лет», «3-ья неудача эко», «когда закончатся деньги») после наступления которого вы гарантированно остановитесь. Если такого события нет, то почему?", "instructions": [], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "d8", "number": 8, "extra": true, "text": "Если бы уже сейчас не было б средств оплатить необходимые счета, вы бы были готовы прямо сейчас продать очень ценный актив (например, машину или квартиру) ради еще одной попытки, даже если шанс успеха менее 10%? Да или нет, почему?", "instructions": [], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "d9", "number": 9, "extra": true, "text": "Если бы сегодня настал конец света и все люди бы исчезли бы с лица земли. Вы бы жалели перед смертью, что у вас так и не было ребенка?", "instructions": [], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}, {"id": "d10", "number": 10, "extra": true, "text": "Если бы у тебя была возможность изменить какую-то одну вещь в твоем прошлом (событие/решение), что бы ты изменил? Почему?", "instructions": [], "fields": [{"key": "text", "label": "Твой ответ", "type": "text"}]}]}]}</script>
+<script id="embedded-answers" type="application/json">null</script>
+<script>'use strict';
+const DATA = JSON.parse(document.getElementById('questionnaire-data').textContent);
+const QUESTIONS = DATA.sections.flatMap(s => s.questions);
+const STORAGE_KEY = 'o-vazhnom.answers.v1';
+const MAX_IMPORT_BYTES = 32 * 1024 * 1024;
+const $ = id => document.getElementById(id);
+const escapeHTML = text => String(text).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const questionMap = new Map(QUESTIONS.map(q => [q.id, q]));
+const native = window.AndroidAnswers;
+let storageOK = true;
+let toastTimer;
+let downloadURL;
+let pendingFile;
+let confirmAction;
+let started = false;
+let viewingOther = false;
+let ownState = null;
+let renderVersion = 0;
+const freshState = () => ({format:'o-vazhnom-answers',version:1,questionnaireId:DATA.id,updatedAt:new Date().toISOString(),activeSection:0,activeQuestion:0,answers:{}});
+
+function validateState(input) {
+  if (!input || input.format !== 'o-vazhnom-answers' || input.version !== 1 || input.questionnaireId !== DATA.id) throw new Error('Это не файл ответов для этой анкеты. Выбери JSON, сохранённый кнопкой «Сохранить ответы».');
+  if (!input.answers || typeof input.answers !== 'object' || Array.isArray(input.answers)) throw new Error('В файле нет корректного списка ответов.');
+  const clean = freshState();
+  if (typeof input.updatedAt === 'string' && Number.isFinite(Date.parse(input.updatedAt))) clean.updatedAt = input.updatedAt;
+  if (Number.isInteger(input.activeSection) && input.activeSection >= 0 && input.activeSection < DATA.sections.length) clean.activeSection = input.activeSection;
+  if (Number.isInteger(input.activeQuestion) && input.activeQuestion >= 0 && input.activeQuestion < QUESTIONS.length) clean.activeQuestion = input.activeQuestion;
+  else clean.activeQuestion = DATA.sections.slice(0,clean.activeSection).reduce((count,section) => count + section.questions.length,0);
+  for (const [id, answer] of Object.entries(input.answers)) {
+    const q = questionMap.get(id);
+    if (!q || !answer || typeof answer !== 'object' || Array.isArray(answer)) throw new Error('В файле есть неизвестный вопрос или повреждённый ответ.');
+    const result = {};
+    for (const [key, value] of Object.entries(answer)) {
+      const f = q.fields.find(f => f.key === key);
+      if (!f) throw new Error('В файле есть неизвестное поле ответа.');
+      let valid = false;
+      if (f.type === 'text') valid = typeof value === 'string' && value.length <= 50000;
+      if (f.type === 'scale') valid = Number.isInteger(value) && value >= 1 && value <= 10;
+      if (f.type === 'number') valid = Number.isInteger(value) && value >= 0 && value <= f.max;
+      if (f.type === 'choice') valid = typeof value === 'string' && f.options.includes(value);
+      if (f.type === 'multi') valid = Array.isArray(value) && value.length > 0 && new Set(value).size === value.length && value.every(v => f.options.includes(v)) && !(value.includes('Ни одна группа') && value.length > 1);
+      if (f.type === 'ranking' && value && Array.isArray(value.order) && Array.isArray(value.excluded)) {
+        const all = [...value.order, ...value.excluded];
+        valid = all.length === f.options.length && new Set(all).size === all.length && all.every(v => Number.isInteger(v) && v >= 0 && v < f.options.length);
+      }
+      if (!valid) throw new Error('В файле есть некорректный ответ на вопрос ' + (q.extra ? 'доп. ' : '') + q.number + '. Текущие ответы сохранены.');
+      result[key] = value;
+    }
+    if (Object.keys(result).length) clean.answers[id] = result;
+  }
+  return clean;
+}
+
+function loadState() {
+  const candidates = [];
+  const embedded = $('embedded-answers').textContent.trim();
+  if (embedded && embedded !== 'null') {
+    try { candidates.push(validateState(JSON.parse(embedded))); }
+    catch { showToast('Не удалось прочитать ответы, встроенные в HTML.'); }
+  }
+  let raw;
+  try { raw = native ? native.readState() : localStorage.getItem(STORAGE_KEY); }
+  catch { storageOK = false; }
+  if (raw) {
+    try { candidates.push(validateState(JSON.parse(raw))); }
+    catch {
+      // Keep the damaged original available for recovery, never overwrite it on load.
+      try { if (!native) localStorage.setItem(STORAGE_KEY + '.recovery', raw); } catch {}
+      showToast('Сохранённые данные повреждены. Загрузи резервный JSON-файл.');
+    }
+  }
+  candidates.sort((a,b) => Date.parse(b.updatedAt) - Date.parse(a.updatedAt));
+  return candidates[0] || freshState();
+}
+
+let state = loadState();
+function persist(touch = true) {
+  if (viewingOther) { $('save-state').textContent = 'Просмотр'; return; }
+  if (touch) state.updatedAt = new Date().toISOString();
+  try {
+    const json = JSON.stringify(state);
+    if (native) {
+      if (!native.writeState(json)) throw new Error('save');
+    } else localStorage.setItem(STORAGE_KEY, json);
+    storageOK = true;
+  } catch { storageOK = false; }
+  $('storage-warning').hidden = storageOK;
+  $('save-state').classList.toggle('failed', !storageOK);
+  $('save-state').textContent = storageOK ? 'Сохранено' : 'Сохрани файлом';
+}
+
+function hasValue(value) {
+  return value !== undefined && value !== null && (typeof value !== 'string' || value.trim() !== '') && (!Array.isArray(value) || value.length > 0);
+}
+function isComplete(q) {
+  const answer = state.answers[q.id] || {};
+  return q.fields.every(f => f.optional || hasValue(answer[f.key]));
+}
+function completeCount() { return QUESTIONS.filter(isComplete).length; }
+function showToast(message) {
+  $('toast').textContent = message;
+  $('toast').hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { $('toast').hidden = true; }, 5500);
+}
+function updateProgress() {
+  const done = completeCount();
+  $('file-summary').textContent = (viewingOther ? 'Чужая анкета · ' : '') + 'Заполнено ' + done + ' из 83 вопросов';
+  $('continue-button').textContent = Object.keys(state.answers).length ? 'Продолжить заполнение' : 'Начать заполнение';
+  $('completion-title').textContent = done === 83 ? 'Анкета заполнена' : 'Ответы сохранены';
+  $('completion-count').textContent = 'Заполнено ' + done + ' из 83 вопросов';
+  $('other-banner').hidden = !viewingOther;
+  document.body.classList.toggle('viewing-other',viewingOther);
+  if (viewingOther) $('save-state').textContent = 'Просмотр';
+  updatePickers();
+}
+
+function answerStatus(q) {
+  return isComplete(q) ? '✓' : Object.values(state.answers[q.id] || {}).some(hasValue) ? '◐' : '○';
+}
+
+function updatePickers() {
+  const topicPicker = $('topic-picker');
+  const questionPicker = $('question-picker');
+  if (!topicPicker || !questionPicker) return;
+  const current = QUESTIONS[state.activeQuestion];
+  const topicIndex = DATA.sections.findIndex(section => section.questions.includes(current));
+  const section = DATA.sections[topicIndex];
+  const percent = Math.round(section.questions.filter(isComplete).length / section.questions.length * 100);
+  $('topic-picker-label').textContent = 'Тема ' + (topicIndex+1) + ' · ' + percent + '%';
+  $('question-picker-label').textContent = answerStatus(current) + ' ' + (current.extra ? 'Доп. вопрос ' : 'Вопрос ') + current.number;
+}
+
+function openJumpMenu(kind) {
+  const current = QUESTIONS[state.activeQuestion];
+  const section = DATA.sections.find(section => section.questions.includes(current));
+  $('jump-title').textContent = kind === 'topic' ? 'Выбрать тему' : 'Вопросы темы';
+  const done = completeCount();
+  const percent = Math.round(done / QUESTIONS.length * 100);
+  $('jump-overall').innerHTML = '<span>Вся анкета</span><strong>' + percent + '%</strong><span class="overall-count">' + done + ' / 83</span><span class="jump-meter"><i style="width:' + percent + '%"></i></span>';
+  $('jump-options').className = 'jump-options ' + (kind === 'topic' ? 'topic-options' : 'question-options');
+  $('jump-options').innerHTML = kind === 'topic' ? DATA.sections.map((topic,index) => {
+    const count = topic.questions.filter(isComplete).length;
+    const percent = Math.round(count / topic.questions.length * 100);
+    return '<button class="jump-topic' + (topic === section ? ' current' : '') + '" data-jump-topic="' + index + '"><span class="jump-topic-name">' + escapeHTML(topic.title) + '</span><span class="jump-percent">' + percent + '%</span><span class="jump-meter"><i style="width:' + percent + '%"></i></span></button>';
+  }).join('') : section.questions.map(q => '<button class="jump-question' + (q === current ? ' current' : '') + '" data-jump-question="' + q.id + '" aria-label="Вопрос ' + q.number + ', ' + (isComplete(q) ? 'ответ дан' : answerStatus(q) === '◐' ? 'ответ частичный' : 'нет ответа') + '"><span class="jump-mark' + (isComplete(q) ? ' complete' : answerStatus(q) === '◐' ? ' partial' : '') + '">' + answerStatus(q) + '</span><span>' + (q.extra ? 'Доп. ' : 'Вопрос ') + q.number + '</span></button>').join('');
+  openDialog('jump-dialog');
+}
+
+function rankingHTML(q, f, value) {
+  const plan = value || {order:f.options.map((_,i) => i), excluded:[]};
+  return '<p class="ranking-help">Кнопки ↑ и ↓ меняют порядок. Кнопка × исключает этап. Исключённый этап можно вернуть кнопкой +.</p><div class="ranking-list">' + [...plan.order, ...plan.excluded].map(id => {
+    const position = plan.order.indexOf(id);
+    const excluded = position === -1;
+    return '<div class="ranking-item' + (excluded ? ' excluded' : '') + '"><span class="rank-position">' + (excluded ? '×' : position + 1) + '</span><span class="ranking-label">' + escapeHTML(f.options[id]) + '</span><div class="ranking-controls">' + (excluded ? '' : '<button type="button" data-rank="up" data-item="' + id + '" aria-label="Поднять этап: ' + escapeHTML(f.options[id]) + '"' + (position === 0 ? ' disabled' : '') + '>↑</button><button type="button" data-rank="down" data-item="' + id + '" aria-label="Опустить этап: ' + escapeHTML(f.options[id]) + '"' + (position === plan.order.length-1 ? ' disabled' : '') + '>↓</button>') + '<button type="button" class="ranking-exclude" data-rank="toggle" data-item="' + id + '" aria-label="' + (excluded ? 'Вернуть' : 'Исключить') + ' этап: ' + escapeHTML(f.options[id]) + '">' + (excluded ? '+' : '×') + '</button></div></div>';
+  }).join('') + '</div><button type="button" class="button button-outline ranking-start" data-rank="confirm">' + (value ? 'Порядок сохранён' : 'Сохранить этот порядок') + '</button>';
+}
+
+function fieldHTML(q, f) {
+  const value = (state.answers[q.id] || {})[f.key];
+  const uid = q.id + '-' + f.key;
+  const label = '<label class="field-label' + (q.fields.filter(field => !field.comment).length === 1 && !f.comment ? ' sr-only' : '') + '" id="label-' + uid + '" for="' + uid + '">' + escapeHTML(f.label) + '</label>';
+  let input = '';
+  if (f.type === 'scale') {
+    input = '<div class="range-heading"><output class="range-output" for="' + uid + '">' + (value === undefined ? '—' : value) + '<span> / 10</span></output></div><div class="range-wrap' + (value === undefined ? ' untouched' : '') + '"><input id="' + uid + '" class="rating-range" type="range" min="1" max="10" step="1" value="' + (value === undefined ? 5 : value) + '" aria-label="' + escapeHTML(f.label + '. 1: ' + f.low + '. 10: ' + f.high) + '"' + (value === undefined ? '' : ' aria-valuetext="' + value + ' из 10"') + '><div class="range-ticks" aria-hidden="true">' + Array.from({length:10},(_,i) => '<span>' + (i+1) + '</span>').join('') + '</div></div>';
+    input += '<div class="range-endpoints"><span>Совсем неважно</span><span>Крайне важно</span></div>';
+  } else if (f.type === 'choice' || f.type === 'multi') {
+    input = '<div class="choice-options' + (f.type === 'multi' ? ' multi' : '') + '" role="group" aria-labelledby="label-' + uid + '">' + f.options.map((option,i) => {
+      const selected = f.type === 'multi' ? (value || []).includes(option) : value === option;
+      return '<button type="button" data-option="' + i + '" class="' + (selected ? 'selected' : '') + '" aria-pressed="' + selected + '">' + escapeHTML(option) + '</button>';
+    }).join('') + '</div>';
+  } else if (f.type === 'text') {
+    input = '<textarea id="' + uid + '" rows="4" maxlength="50000" placeholder="Напиши здесь…">' + escapeHTML(value || '') + '</textarea>';
+  } else if (f.type === 'number') {
+    input = '<input class="number-input" id="' + uid + '" type="number" inputmode="numeric" min="0" max="' + f.max + '" step="1" value="' + (value === undefined ? '' : value) + '" placeholder="0">';
+  } else if (f.type === 'ranking') input = rankingHTML(q, f, value);
+  if (['scale','choice','multi'].includes(f.type)) input += '<button type="button" class="clear-answer" data-clear' + (hasValue(value) ? '' : ' hidden') + '>Сбросить ответ</button>';
+  return '<div class="field' + (f.comment ? ' comment-field' : '') + '" data-field="' + f.key + '"' + (f.comment ? ' id="comment-field"' + (hasValue(value) ? '' : ' hidden') : '') + '>' + label + input + '</div>';
+}
+
+function renderQuestion(scroll = false, direction = 0) {
+  renderVersion++;
+  const q = QUESTIONS[state.activeQuestion];
+  const section = DATA.sections.find(s => s.questions.includes(q));
+  $('section-title').textContent = section.title;
+  $('question-counter').textContent = (state.activeQuestion + 1) + ' / 83';
+  $('wizard-progress-fill').style.width = ((state.activeQuestion + 1) / 83 * 100) + '%';
+  $('wizard-progress').setAttribute('aria-valuenow',state.activeQuestion + 1);
+  $('previous-button').disabled = state.activeQuestion === 0;
+  $('next-button').textContent = state.activeQuestion === 82 ? 'Завершить' : 'Дальше';
+  const details = q.instructions.filter(t => !/^(Дай ответ цифрой|Дай развернутый|Ответь МОГ|Поставь оценку|Назови цифру|Назови сколько таких|Вариант [12]\.|И, как думаешь|Как думаешь, насколько готов|Если пока не готов|И укажи ребенок|Укажи ребенок)/.test(t));
+  const title = q.text.replace(/\s*Дай ответ цифрой от 1 до 10.*$/, '');
+  const extra = !details.length ? '' : q.id === 'q40' ? '<details class="instructions"><summary>Группы здоровья</summary>' + details.map(t => '<p>' + escapeHTML(t) + '</p>').join('') + '</details>' : '<div class="question-description">' + details.map(t => '<p>' + escapeHTML(t) + '</p>').join('') + '</div>';
+  const hasComment = q.fields.some(f => f.comment);
+  const commentOpen = hasValue((state.answers[q.id] || {}).comment);
+  const pencil = !hasComment ? '' : '<button class="comment-toggle icon-button" data-comment-toggle aria-label="Комментарий к вопросу" aria-controls="comment-field" aria-expanded="' + commentOpen + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4 5 5M4 20l5-1 11-11a2 2 0 0 0-5-5L4 14z"/></svg></button>';
+  const pickers = '<div class="card-switchers"><button id="topic-picker" class="picker-button" aria-haspopup="dialog" aria-controls="jump-dialog"><span id="topic-picker-label"></span><i aria-hidden="true"></i></button><button id="question-picker" class="picker-button" aria-haspopup="dialog" aria-controls="jump-dialog"><span id="question-picker-label"></span><i aria-hidden="true"></i></button>' + pencil + '</div>';
+  const orderedFields = [...q.fields.filter(f => f.comment),...q.fields.filter(f => !f.comment)];
+  $('question-list').innerHTML = '<article class="question-card" id="question-' + q.id + '" data-question="' + q.id + '">' + pickers + '<h1 class="question-text">' + escapeHTML(title) + '</h1>' + extra + '<div class="answer-fields">' + orderedFields.map(f => fieldHTML(q,f)).join('') + '</div></article>';
+  if (viewingOther) {
+    document.querySelectorAll('.answer-fields button,.answer-fields input').forEach(element => { element.disabled = true; });
+    document.querySelectorAll('.answer-fields textarea').forEach(element => { element.readOnly = true; });
+    document.querySelectorAll('.clear-answer').forEach(element => { element.hidden = true; });
+  }
+  updateProgress();
+  if (direction && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelector('.question-card').animate([{transform:'translateX(' + (direction*34) + 'px) rotate(' + (direction*2) + 'deg)',opacity:.6},{transform:'translateX(0)',opacity:1}],{duration:190,easing:'cubic-bezier(.2,.7,.2,1)'});
+  }
+  if (scroll) { window.scrollTo({top:0,behavior:'instant'}); $('question-section').focus({preventScroll:true}); }
+}
+
+function showQuestion() {
+  started = true;
+  $('intro').hidden = true;
+  $('completion-screen').hidden = true;
+  $('question-section').hidden = false;
+  renderQuestion(true);
+  if (!native && navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+}
+
+function setAnswer(q, f, value) {
+  if (viewingOther) return;
+  if (!state.answers[q.id]) state.answers[q.id] = {};
+  if (value === undefined || value === '' || Array.isArray(value) && !value.length) delete state.answers[q.id][f.key];
+  else state.answers[q.id][f.key] = value;
+  if (!Object.keys(state.answers[q.id]).length) delete state.answers[q.id];
+  persist();
+  updateProgress();
+}
+
+function goQuestion(index) {
+  const direction = Math.sign(index - state.activeQuestion);
+  state.activeQuestion = Math.max(0,Math.min(82,index));
+  const current = QUESTIONS[state.activeQuestion];
+  state.activeSection = DATA.sections.findIndex(section => section.questions.includes(current));
+  persist(false);
+  renderQuestion(true,direction);
+}
+
+$('question-list').addEventListener('click', e => {
+  const button = e.target.closest('button');
+  if (!button) return;
+  if (button.id === 'topic-picker' || button.id === 'question-picker') { openJumpMenu(button.id === 'topic-picker' ? 'topic' : 'question'); return; }
+  if (button.hasAttribute('data-comment-toggle')) {
+    const field = $('comment-field');
+    field.hidden = !field.hidden;
+    button.setAttribute('aria-expanded',String(!field.hidden));
+    const area = field.querySelector('textarea');
+    if (!field.hidden) { area.focus(); setTimeout(() => area.scrollIntoView({block:'center',behavior:'smooth'}),120); }
+    else area.blur();
+    return;
+  }
+  const card = button.closest('[data-question]');
+  const container = button.closest('[data-field]');
+  const q = questionMap.get(card.dataset.question);
+  const f = q.fields.find(f => f.key === container.dataset.field);
+  let value = (state.answers[q.id] || {})[f.key];
+  if (button.hasAttribute('data-clear')) value = undefined;
+  else if (f.type === 'scale') value = Number(button.dataset.value);
+  else if (f.type === 'choice') value = f.options[Number(button.dataset.option)];
+  else if (f.type === 'multi') {
+    const option = f.options[Number(button.dataset.option)];
+    const old = value || [];
+    value = old.includes(option) ? old.filter(v => v !== option) : option === 'Ни одна группа' ? [option] : [...old.filter(v => v !== 'Ни одна группа'),option];
+  } else if (f.type === 'ranking') {
+    value = value ? {order:[...value.order],excluded:[...value.excluded]} : {order:f.options.map((_,i) => i),excluded:[]};
+    const id = Number(button.dataset.item);
+    const index = value.order.indexOf(id);
+    if (button.dataset.rank === 'toggle') {
+      if (index >= 0) { value.order.splice(index,1); value.excluded.push(id); }
+      else { value.excluded = value.excluded.filter(i => i !== id); value.order.push(id); }
+    } else if (button.dataset.rank === 'up' || button.dataset.rank === 'down') {
+      const next = index + (button.dataset.rank === 'up' ? -1 : 1);
+      if (next >= 0 && next < value.order.length) [value.order[index], value.order[next]] = [value.order[next],value.order[index]];
+    }
+  }
+  setAnswer(q,f,value);
+  const temp = document.createElement('div');
+  temp.innerHTML = fieldHTML(q,f);
+  container.replaceWith(temp.firstElementChild);
+});
+
+$('question-list').addEventListener('input', e => {
+  if (!e.target.matches('textarea,input')) return;
+  const q = questionMap.get(e.target.closest('[data-question]').dataset.question);
+  const f = q.fields.find(f => f.key === e.target.closest('[data-field]').dataset.field);
+  let value = e.target.value;
+  if (f.type === 'number' && value === '') e.target.setCustomValidity('');
+  if (f.type === 'scale') {
+    value = Number(value);
+    const container = e.target.closest('[data-field]');
+    container.querySelector('.range-output').innerHTML = value + '<span> / 10</span>';
+    container.querySelector('.range-wrap').classList.remove('untouched');
+    e.target.setAttribute('aria-valuetext',value + ' из 10');
+    const clear = container.querySelector('[data-clear]');
+    if (clear) clear.hidden = false;
+  }
+  if (f.type === 'number' && value !== '') {
+    const number = Number(value);
+    const valid = Number.isInteger(number) && number >= 0 && number <= f.max;
+    e.target.setCustomValidity(valid ? '' : 'Введи целое число от 0 до ' + f.max);
+    if (!valid) { setAnswer(q,f,undefined); return; }
+    value = number;
+  }
+  setAnswer(q,f,value);
+});
+
+$('question-list').addEventListener('pointerup', e => {
+  if (e.target.matches('.rating-range')) e.target.dispatchEvent(new Event('input',{bubbles:true}));
+});
+
+$('jump-options').addEventListener('click', e => {
+  const button = e.target.closest('button');
+  if (!button) return;
+  if (button.dataset.jumpQuestion) goQuestion(QUESTIONS.findIndex(q => q.id === button.dataset.jumpQuestion));
+  else {
+    const section = DATA.sections[Number(button.dataset.jumpTopic)];
+    goQuestion(QUESTIONS.indexOf(section.questions.find(q => !isComplete(q)) || section.questions[0]));
+  }
+  $('jump-dialog').close();
+});
+
+function openDialog(id) { if (!$(id).open) $(id).showModal(); }
+function confirmChange(title,message,action) {
+  $('confirm-title').textContent = title;
+  $('confirm-message').textContent = message;
+  confirmAction = action;
+  openDialog('confirm-dialog');
+}
+function closeConfirm() { confirmAction = null; $('confirm-dialog').close(); }
+$('confirm-cancel').onclick = closeConfirm;
+$('cancel-cross').onclick = closeConfirm;
+$('confirm-dialog').addEventListener('cancel', () => { confirmAction = null; });
+$('confirm-ok').onclick = () => { const action = confirmAction; closeConfirm(); if (action) action(); };
+document.querySelectorAll('.close-dialog').forEach(button => button.onclick = () => button.closest('dialog').close());
+
+function importAnswers(text) {
+  if (viewingOther) { showToast('Сначала вернись к своей анкете.'); return false; }
+  let candidate;
+  try {
+    if (text.length > MAX_IMPORT_BYTES) throw new Error('Файл слишком большой. Максимальный размер 32 МБ.');
+    candidate = validateState(JSON.parse(text.replace(/^\uFEFF/,'')));
+  } catch (error) { showToast(error instanceof SyntaxError ? 'Не удалось прочитать JSON. Выбери файл, сохранённый из этой анкеты.' : error.message); return false; }
+  const count = QUESTIONS.filter(q => q.fields.every(f => f.optional || hasValue((candidate.answers[q.id] || {})[f.key]))).length;
+  confirmChange('Загрузить ответы из файла?', 'В файле заполнено ' + count + ' из 83 вопросов. Текущие ответы будут заменены. Перед заменой можно отменить загрузку и сохранить свою копию.', () => {
+    state = candidate;
+    persist();
+    renderQuestion();
+    showQuestion();
+    $('files-dialog').close();
+    showToast('Ответы загружены. Заполнено ' + completeCount() + ' из 83 вопросов.');
+  });
+  return true;
+}
+function openOtherAnswers(text) {
+  let candidate;
+  try {
+    if (text.length > MAX_IMPORT_BYTES) throw new Error('Файл слишком большой. Максимальный размер 32 МБ.');
+    candidate = validateState(JSON.parse(text.replace(/^\uFEFF/,'')));
+  } catch (error) { showToast(error instanceof SyntaxError ? 'Не удалось прочитать JSON-файл.' : error.message); return false; }
+  if (!viewingOther) { persist(false); ownState = state; }
+  viewingOther = true;
+  state = candidate;
+  $('files-dialog').close();
+  showQuestion();
+  return true;
+}
+function returnToOwn() {
+  if (!viewingOther) return;
+  state = ownState;
+  ownState = null;
+  viewingOther = false;
+  showQuestion();
+  $('save-state').textContent = storageOK ? 'Сохранено' : 'Сохрани файлом';
+}
+$('return-own').onclick = returnToOwn;
+$('restore-own').onclick = () => { const copy = JSON.stringify(state); returnToOwn(); importAnswers(copy); };
+window.receiveImportedAnswers = openOtherAnswers;
+window.nativeFileResult = (success,message) => showToast(message || (success ? 'Файл сохранён' : 'Не удалось сохранить файл'));
+
+function filledHTML() {
+  const doc = document.documentElement.cloneNode(true);
+  doc.querySelector('#embedded-answers').textContent = JSON.stringify(state).replace(/</g,'\\u003c');
+  doc.querySelectorAll('dialog').forEach(d => d.removeAttribute('open'));
+  doc.querySelector('#toast').setAttribute('hidden','');
+  // Runtime markup is rebuilt from the embedded answers when the file is opened.
+  doc.querySelector('#question-list').replaceChildren();
+  doc.querySelectorAll('link[rel="manifest"],link[rel="apple-touch-icon"]').forEach(node => node.remove());
+  return '<!doctype html>\n' + doc.outerHTML;
+}
+
+function prepareExport(kind) {
+  const date = new Date().toISOString().slice(0,10);
+  const prefix = viewingOther ? 'o-vazhnom-other-' : 'o-vazhnom-';
+  let content, type, name;
+  if (kind === 'json') { content = JSON.stringify(state,null,2); type='application/json'; name=prefix + 'answers-' + date + '.json'; }
+  else { content = filledHTML(); type='text/html'; name=prefix + 'filled-' + date + '.html'; }
+  if (native) {
+    pendingFile = {name,type,content};
+    $('download-link').href = '#';
+    $('download-link').removeAttribute('download');
+    $('download-link').onclick = e => { e.preventDefault(); native.exportFile(name,type,content); };
+    $('download-name').textContent = name;
+    $('share-file').hidden = !native.shareFile;
+    openDialog('download-dialog');
+    return;
+  }
+  const blob = new Blob([content],{type:type + ';charset=utf-8'});
+  if (downloadURL) URL.revokeObjectURL(downloadURL);
+  downloadURL = URL.createObjectURL(blob);
+  pendingFile = {blob,name,type};
+  $('download-link').href = downloadURL;
+  $('download-link').download = name;
+  $('download-name').textContent = name;
+  let canShare = false;
+  try { canShare = !!navigator.canShare && navigator.canShare({files:[new File([blob],name,{type})]}); } catch {}
+  $('share-file').hidden = !canShare;
+  openDialog('download-dialog');
+}
+$('share-file').onclick = async () => {
+  if (!pendingFile) return;
+  if (native) { native.shareFile(pendingFile.name,pendingFile.type,pendingFile.content); return; }
+  try { await navigator.share({files:[new File([pendingFile.blob],pendingFile.name,{type:pendingFile.type})]}); }
+  catch (error) { if (error.name !== 'AbortError') showToast('Не удалось открыть меню. Используй кнопку «Скачать файл».'); }
+};
+$('export-json').onclick = () => prepareExport('json');
+$('export-html').onclick = () => prepareExport('html');
+$('import-other').onclick = () => { native ? native.importFile() : $('import-file').click(); };
+$('import-file').onchange = async e => {
+  const file = e.target.files[0];
+  if (file) {
+    if (file.size > MAX_IMPORT_BYTES) showToast('Файл слишком большой. Максимальный размер 32 МБ.');
+    else try { window.receiveImportedAnswers(await file.text()); } catch { showToast('Не удалось открыть файл. Попробуй выбрать его ещё раз.'); }
+  }
+  e.target.value = '';
+};
+$('files-button').onclick = () => openDialog('files-dialog');
+$('home').onclick = e => { e.preventDefault(); $('intro').hidden = false; $('question-section').hidden = true; $('completion-screen').hidden = true; window.scrollTo({top:0,behavior:'instant'}); };
+$('continue-button').onclick = showQuestion;
+$('previous-button').onclick = () => goQuestion(state.activeQuestion - 1);
+$('next-button').onclick = () => {
+  if (state.activeQuestion < 82) goQuestion(state.activeQuestion + 1);
+  else {
+    $('question-section').hidden = true;
+    $('completion-screen').hidden = false;
+    updateProgress();
+    window.scrollTo({top:0,behavior:'instant'});
+  }
+};
+let drag = null;
+let swipeAnimating = false;
+function resetDrag(card = document.querySelector('.question-card')) {
+  if (!card) return;
+  card.classList.remove('dragging');
+  card.style.transition = 'transform 180ms ease-out, opacity 180ms ease-out';
+  card.style.transform = '';
+  card.style.opacity = '';
+}
+function finishSwipe(dx,card) {
+  const forward = dx < 0;
+  if (!forward && state.activeQuestion === 0) { resetDrag(card); return; }
+  const version = renderVersion;
+  const flip = () => {
+    swipeAnimating = false;
+    if (version === renderVersion && !$('question-section').hidden) $(forward ? 'next-button' : 'previous-button').click();
+  };
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { flip(); return; }
+  swipeAnimating = true;
+  const sign = forward ? -1 : 1;
+  const animation = card.animate([{transform:card.style.transform || 'translateX(0)',opacity:1},{transform:'translateX(' + (sign*innerWidth) + 'px) rotate(' + (sign*20) + 'deg)',opacity:0}],{duration:170,easing:'cubic-bezier(.4,0,.8,.5)',fill:'forwards'});
+  animation.finished.then(flip).catch(() => {swipeAnimating=false;resetDrag(card);});
+}
+$('question-section').addEventListener('pointerdown', e => {
+  if (swipeAnimating || !e.isPrimary || e.button !== 0 || e.target.closest('input,textarea,button,a,details,.ranking-list')) return;
+  const card = e.target.closest('.question-card');
+  if (!card) return;
+  card.getAnimations().forEach(animation => animation.cancel());
+  card.style.transition='none';
+  drag = {id:e.pointerId,x:e.clientX,y:e.clientY,card,horizontal:false};
+});
+$('question-section').addEventListener('pointermove', e => {
+  if (!drag || drag.id !== e.pointerId) return;
+  const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+  if (!drag.horizontal) {
+    if (Math.abs(dy)>14 && Math.abs(dy)>Math.abs(dx)*1.2) {resetDrag(drag.card);drag=null;return;}
+    if (Math.abs(dx)<10 || Math.abs(dx)<Math.abs(dy)*1.2) return;
+    drag.horizontal=true;
+    drag.card.setPointerCapture(e.pointerId);
+    drag.card.classList.add('dragging');
+  }
+  if (e.cancelable) e.preventDefault();
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const shift=Math.max(-140,Math.min(140,dx*.7));
+    const angle=Math.max(-12,Math.min(12,dx/drag.card.offsetWidth*18));
+    drag.card.style.transform='translateX('+shift+'px) rotate('+angle+'deg)';
+    drag.card.style.opacity=String(1-Math.min(.25,Math.abs(dx)/innerWidth*.25));
+  }
+});
+$('question-section').addEventListener('pointerup', e => {
+  if (!drag || drag.id !== e.pointerId) return;
+  const current=drag;
+  drag=null;
+  const dx=e.clientX-current.x,dy=e.clientY-current.y;
+  const threshold=Math.max(45,Math.min(80,current.card.offsetWidth*.16));
+  if (current.horizontal && Math.abs(dx)>=threshold && Math.abs(dx)>Math.abs(dy)) finishSwipe(dx,current.card);
+  else resetDrag(current.card);
+});
+$('question-section').addEventListener('pointercancel', () => {if(drag)resetDrag(drag.card);drag=null;});
+$('completion-export').onclick = () => openDialog('files-dialog');
+$('completion-resume').onclick = () => {
+  const first = QUESTIONS.findIndex(q => !isComplete(q));
+  if (first >= 0) state.activeQuestion = first;
+  showQuestion();
+};
+renderQuestion();
+if (Object.keys(state.answers).length) showQuestion();
+// Probe storage without destroying previously saved answers or the recovery copy.
+if (!native) {
+  try { localStorage.setItem(STORAGE_KEY + '.probe','1'); localStorage.removeItem(STORAGE_KEY + '.probe'); storageOK = true; }
+  catch { storageOK = false; }
+}
+$('storage-warning').hidden = storageOK;
+$('save-state').textContent = storageOK ? 'Сохранение на устройстве' : 'Сохрани ответы файлом';
+$('save-state').classList.toggle('failed',!storageOK);
+$('file-note').hidden = !(location.protocol === 'file:' && /iPhone|iPad|iPod/.test(navigator.userAgent));
+document.addEventListener('visibilitychange', () => { if (document.hidden && Object.keys(state.answers).length) persist(false); });
+if (!native && /^https?:$/.test(location.protocol) && 'serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(() => {});
+
+function updateThemeButton() {
+  const dark = document.documentElement.dataset.theme === 'dark';
+  $('theme-toggle').setAttribute('aria-label',dark ? 'Включить светлую тему' : 'Включить тёмную тему');
+  $('theme-toggle').setAttribute('aria-pressed',String(dark));
+  $('theme-toggle').innerHTML = dark ? '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg>' : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14a8.5 8.5 0 0 1-10.5-10.5A8.5 8.5 0 1 0 20.5 14z"/></svg>';
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#151f1b' : '#214b42';
+}
+$('theme-toggle').onclick = () => {
+  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = theme;
+  try { if (native && native.writeTheme) native.writeTheme(theme); else localStorage.setItem('o-vazhnom.theme',theme); } catch {}
+  updateThemeButton();
+};
+updateThemeButton();
+if (window.visualViewport) visualViewport.addEventListener('resize', () => {
+  const active = document.activeElement;
+  if (active && active.matches('textarea,input[type="number"]')) setTimeout(() => active.scrollIntoView({block:'center',behavior:'smooth'}),100);
+});
+</script>
+</body>
+</html>
